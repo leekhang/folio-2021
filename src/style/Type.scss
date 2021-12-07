@@ -1,7 +1,53 @@
+/* Mabry Pro Font Family --------------------------------- */ 
+
+@font-face { 
+	font-family: 'Mabry Black';
+	src: url('../assets/fonts/mabry-black-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Bold';
+	src: url('../assets/fonts/mabry-bold-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Med';
+	src: url('../assets/fonts/mabry-medium-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Reg';
+	src: url('../assets/fonts/mabry-regular-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Light';
+	src: url('../assets/fonts/mabry-light-pro.otf');
+}
+
+/* Relative Font Family --------------------------------- */ 
+
+@font-face { 
+	font-family: 'Relative Book';
+	src: url('../assets/fonts/relative-book-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Relative Medium';
+	src: url('../assets/fonts/relative-medium-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Relative Bold';
+	src: url('../assets/fonts/relative-bold-trial.otf');
+}
+
 @font-face { 
 	font-family: 'Relative Faux';
 	src: url('../assets/fonts/relative-faux-book-trial.otf');
 }
+
+/* Peggs Font Family --------------------------------- */ 
 
 @font-face { 
 	font-family: 'Peggs Bold';
@@ -25,6 +71,7 @@
 
 h1 {
    font-family: 'Peggs Reg';
+   // font-family: 'Mabry Reg';
    font-size: 72px;
    line-height: 72px;
    color: #FF9431;
@@ -34,8 +81,16 @@ h1 {
 
 p {
    font-family: 'Peggs Reg';
+   // font-family: 'Mabry Reg';
    font-size: 72px;
    line-height: 72px;
    color: #444444;
    margin: 0;
 }
+
+button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &:hover { cursor: pointer; }
+ }

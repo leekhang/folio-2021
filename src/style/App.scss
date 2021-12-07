@@ -1,39 +1,109 @@
-$cyan: #00FFFF;
-$red: #f45e61;
-$blue: #0eb7da;
+@import "Variables";
 
-.App {
+.app {
   background-color: #FBF6ED;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
 }
 
-.Name-container {
+.intro-app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  overscroll-behavior-y: none;
+}
+
+.name-container {
   padding: 40px;
   width: fit-content;
 }
 
-.Phrase-list-container {
+.name-letter-l {
+  display: inline-block;
+  margin-right: -6px;
+  transition: margin-right 2s cubic-bezier(.44,.01,.48,1);
+}
+
+.name-letter-e {
+  display: inline-block;
+  margin-right: 3px;
+  transform: rotate(-30deg);
+}
+
+.phrase-list-container {
   display: flex;
-  flex-direction: column;
-  // flex: 1 1 720px;
   justify-content: flex-end;
-  width: 800px;
-  padding: 40px;
+  flex-direction: column;
+  padding-right: 48px;
+  padding-bottom: 40px;
+  width: fit-content;
+}
+
+.phrase-container {
+  display: flex;
+  flex-direction: row;
+  // width: 1000px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.phrase-growing-container {
+  height: 184px;
+  transition: $transition-50;
 }
 
 .phrase-layout {
   position: relative; 
   margin-bottom: 40px;
+  width: 720px;
+}
+
+.down-btn {
+  width: 88px;
+  height: 88px;
+  border: none;
+  border: 4px solid $black;
+  border-radius: 100px;
+  background: none;
+  
+  &:hover {
+    background: $black;
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.phrase-hidden {
+  opacity: 0;
+  transition: $transition-25;
+}
+
+.phrase-focus {
+  p, img, button { opacity: 1 }
+
+  p, img { transition: $transition-25 }
+  .down-btn > img { transition: $transition-1 }
+
+  img { transform: scale(1.1); }
+}
+
+.phrase-unfocus {
+  p, img { opacity: 15%; }
+  button { opacity: 0% }
+
+  img { transform: scale(1); }  
+
+  p, img { transition: all 0.25s cubic-bezier(.44,.01,.48,1) }
+  .down-btn > img { transition: all 0.01s cubic-bezier(.44,.01,.48,1) }
 }
 
 #FB-icon {
   width: 156px;
   position: absolute;
   right: -12px;
-  bottom: -68px;
+  bottom: -64px;
+  animation: rotation 40s infinite linear;
 }
 
 #Build-icon {
@@ -41,124 +111,100 @@ $blue: #0eb7da;
   position: absolute;
   left: -112px;
   top: -64px;
+  animation: step-rotation 4s infinite step-start;
 }
 
 #Story-icon {
-  width: 206px;
+  width: 180px;
   position: absolute;
-  right: 40px;
-  bottom: -16px;
+  right: -24px;
+  top: -80px;
+  animation: wiggle 2s infinite ease-in-out;
 }
 
 #Child-icon {
   width: 190px;
   position: absolute;
-  right: 220px;
-  bottom: -96px;
+  left: -200px;
+  top: 12px;
+  // animation: bounce 1s infinite linear;
+  animation: tada 2s infinite linear
 }
 
+@keyframes rotation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(359deg) }
+}
 
-// .App-header {
-//   /* min-height: 100vh; */
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
+@keyframes step-rotation {
+  0% { transform: rotate(0deg) }
+  10% { transform: rotate(-36deg) }
+  20% { transform: rotate(-72deg) }
+  30% { transform: rotate(-108deg) }
+  40% { transform: rotate(-144deg) }
+  50% { transform: rotate(-180deg) }
+  60% { transform: rotate(-216deg) }
+  70% { transform: rotate(-252deg) }
+  80% { transform: rotate(-288deg) }
+  90% { transform: rotate(-324deg) }
+  100% { transform: rotate(0deg) }
+}
+
+@keyframes wiggle {
+  0%   { transform: rotate(0deg) }
+  25%  { transform: rotate(-10deg) scale(1.2) }
+  50%  { transform: rotate(10deg)  }
+  75%  { transform: rotate(-5deg) scale(1) }
+  100% { transform: rotate(0deg)  }
+}
+
+// .bounce-7 {
+//   animation-name: bounce-7;
+//   animation-timing-function: 
 // }
 
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
+// @keyframes bounce {
+//   0%   { transform: scale(1,1)      translateY(0); }
+//   10%  { transform: scale(1.1,.9)   translateY(0); }
+//   30%  { transform: scale(.97,1.03)   translateY(-50px); }
+//   50%  { transform: scale(1.03,.97) translateY(0); }
+//   // 57%  { transform: scale(1,1)      translateY(-5px); }
+//   60%  { transform: scale(1,1)      translateY(-5px); }
+//   // 64%  { transform: scale(1,1)      translateY(0); }
+//   70%  { transform: scale(1,1)      translateY(0); }
+//   100% { transform: scale(1,1)      translateY(0); }
 // }
 
-// BUTTON EXPERIMENT
+@keyframes tada {
+  0% {
+    // -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
 
-// button {
-//   border-radius: 100px;
-//   background: none;
-//   border: 0;
-//   box-sizing: border-box;
-//   margin: 1em;
-//   padding: 1em 2em;
-  
-//   // Using inset box-shadow instead of border for sizing simplicity
-//   // box-shadow: inset 0 0 0 2px $red;
-//   color: white;
-//   font-size: inherit;
-//   font-weight: 700;
+  8% {
+    // -webkit-transform: scale3d(.9,.9,.9) rotate(-3deg);
+    transform: scale3d(.9,.9,.9) rotate(-3deg)
+  }
 
-//   // Required, since we're setting absolute on pseudo-elements
-//   position: relative;
-//   vertical-align: middle;
+  24%,40%,56%,72% {
+    // -webkit-transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+    transform: scale3d(1.1,1.1,1.1) rotate(3deg)
+  }
 
-//   &::before,
-//   &::after {
-//     // border-radius: 100px;
-//     box-sizing: inherit;
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
+  16%,32%,48%,64% {
+    // -webkit-transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+    transform: scale3d(1.1,1.1,1.1) rotate(-3deg)
+  }
 
-// .circle {
-//   // border-radius: 100%px;
-//   box-shadow: none;
-    
-//   &::before,
-//   &::after {
-//     // border-radius: 100%;
-//   }
-// }
+  88% {
+    transform: scaleX(1) rotate(0deg)
+  }
+  // 96% {
+  //   transform: scaleX(1)
+  // }
 
-// .spin {
-//   width: 5em;
-//   height: 5em;
-//   padding: 0;
-  
-//   &:hover {
-//     color: $blue;
-//   }
-
-//   &::before,
-//   &::after {
-//     top: 0;
-//     left: 0;
-//   }
-
-//   &::before {
-//     border: 2px solid transparent; // We're animating border-color again
-//   }
-
-//   &:hover::before {
-//     border-top-color: $blue; // Show borders
-//     border-right-color: $blue;
-//     border-bottom-color: $blue;
-
-//     transition:
-//       border-top-color 0.15s linear, // Stagger border appearances
-//       border-right-color 0.15s linear 0.10s,
-//       border-bottom-color 0.15s linear 0.20s;
-//   }
-
-//   &::after {
-//     border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
-//   }
-
-//   &:hover::after {
-//     border-top: 2px solid $blue; // Shows border
-//     border-left-width: 2px; // Solid edges, invisible borders
-//     border-right-width: 2px; // Solid edges, invisible borders
-//     transform: rotate(270deg); // Rotate around circle
-//     transition:
-//       transform 0.4s linear 0s,
-//       border-left-width 0s linear 0.35s; // Solid edge post-rotation
-//   }
-// }
+  to {
+    // -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+}

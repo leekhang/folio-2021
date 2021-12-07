@@ -1,0 +1,24 @@
+$cyan: #00FFFF;
+$red: #f45e61;
+$blue: #0eb7da;
+$black: #444444;
+$content-black: #646464;
+$tilt: 9deg;
+$page-width: 1000px;
+
+$hard-shadow-depth: 16px;
+$hard-shadow-color: rgba(60, 43, 12, 0.5);
+
+$reg-shadow-1: drop-shadow(0 20px  17px rgba(89, 64, 19,.12));
+$reg-shadow-2: drop-shadow(0 12px  10px rgba(89, 64, 19,.1));
+$reg-shadow-3: drop-shadow(0 6px   5px  rgba(89, 64, 19,.08));
+$reg-shadow-4: drop-shadow(0 2px   2px  rgba(89, 64, 19,.04));
+
+$hov-shadow-1: drop-shadow(0 20px 17px rgba(89, 64, 19,.2));
+$hov-shadow-2: drop-shadow(0 12px 10px rgba(89, 64, 19,.18));
+$hov-shadow-3: drop-shadow(0 6px  5px  rgba(89, 64, 19,.16));
+$hov-shadow-4: drop-shadow(0 2px  2px  rgba(89, 64, 19,.04));
+
+$transition-1: all 0.01s cubic-bezier(.44,.01,.48,1);
+$transition-25: all 0.25s cubic-bezier(.44,.01,.48,1);
+$transition-50: all 0.5s cubic-bezier(.44,.01,.48,1);

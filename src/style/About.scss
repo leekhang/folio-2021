@@ -1,0 +1,71 @@
+@import "Variables";
+
+.about-app {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to top,rgb(251, 246, 237) 50%,rgb(255, 255, 255) 100%);
+}
+
+.about-title-section {
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0px 0px 56px;
+
+  #chinese-title {
+    font-family: "Peggs Reg";
+    font-size: 2.5rem;
+    line-height: 125%;
+    color: $black;
+  }
+
+  .about-title {
+    font-family: "Peggs Med";
+    font-size: 2.5rem;
+    line-height: 125%;
+    letter-spacing: -1px;
+    color: $black;
+  }
+}
+
+.about-layout-container {
+  // height: inherit;
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .about-left-column {
+    flex: 1 0 200px;
+    margin-right: 80px;
+  }
+
+  .about-right-column {
+    flex: 0 0 400px;
+  }
+}
+
+.about-p {
+  font-family: 'Relative Faux';
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin-bottom: 2rem;
+  color: $content-black;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile-img {
+  background-image: url('../assets/images/profile.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 420px;
+  height: 0;
+  padding-top: 160%;
+  transform: rotate(2deg);
+  filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4;
+}

@@ -1,0 +1,111 @@
+@import "Variables";
+
+.navbar-container {
+  width: 100vw;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(1px);
+  background: linear-gradient(0deg, rgba(251, 246, 237, 0%), rgba(255, 255, 255, 1) 75%);
+}
+
+.navbar {
+  width: $page-width;
+  padding: 24px 0px 24px;
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: [first] 250px [line1] auto [line2] 250px [end];  
+  a { text-decoration: none; }
+}
+
+.nav-name-container {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+#nav-name {
+  font-family: 'Peggs Bold';
+  font-size: 1.5rem;
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: #FF9431;
+  text-decoration: none;
+}
+
+.nav-btns-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn {
+  // type
+  font-family: "Relative Bold";
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #242424;
+  text-decoration: none;
+}
+
+.nav-link-btn {
+  // button 
+  background: none;
+  border: 1px solid #B2AFA9;
+  border-radius: 100px;
+  padding: 8px 12px 8px;
+  margin: 0px 8px 0px;
+  transition: all 0.05s cubic-bezier(.44,.01,.48,1);
+
+  &:hover {
+    border: 1px solid rgba(0,0,0,0);
+    color: #ffffff;
+    background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.45) 75%, rgba(0,0,0,.25) 100%);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08) ; 
+    transition: color 0.1s cubic-bezier(.44,.01,.48,1);
+  }
+
+  &:selected {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+}
+
+#nav-btn-selected {
+  color: #ffffff;
+  background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.45) 75%, rgba(0,0,0,.25) 100%);
+}
+
+.comms-list {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.nav-comm-btn {
+   margin: 0px 12px 0px;
+
+   img {
+      width: 22px;
+      transition: all 0.15s cubic-bezier(.44,.01,.48,1);
+
+      &:hover {
+         transform: scale(1.02) rotate(-12deg);
+         transition: all 0.15s cubic-bezier(.44,.01,.48,1);
+      }
+   }
+}
+
+#resume-btn {
+   margin-right: 0;
+   margin-left: 12px;   
+}
+
