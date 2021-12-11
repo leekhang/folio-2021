@@ -17,7 +17,6 @@ function App(props) {
           <Route exact path="/" render={ routerProps => (<IntroPage {...routerProps}/>) } />
           <Route path="/work" render={ routerProps => (<WorkPage { ...routerProps } />) }/>
           <Route path="/about" render={ routerProps => (<AboutPage { ...routerProps } />) }/>
-        
           <Redirect to="/"/>
         </Switch>
         </BrowserRouter>
