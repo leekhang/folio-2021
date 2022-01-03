@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 /* Import Styles ------------------------------ */ 
 
@@ -11,17 +12,22 @@ import './style/Variables.scss';
 import './style/Type.scss';
 
 // Component Styles
-import './style/App.scss';
-import './style/Work.scss';
-import './style/Nav.scss';
-import './style/About.scss';
+import './style/Tooltip.scss';
+import './style/NavBar.scss';
 
+// Page Styles
+import './style/IntroPage.scss';
+import './style/WorkPage.scss';
+import './style/AboutPage.scss';
+import './style/ProjectPage.scss';
 
 /* Render Web App ------------------------------ */ 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

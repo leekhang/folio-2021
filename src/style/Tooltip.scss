@@ -1,0 +1,81 @@
+@import "Variables";
+
+$arrow-height: 6px;
+$arrow-width: 10px;
+
+#about-title-2nd-row {
+  display: flex;
+  flex-direction: row;
+  height: 3.125rem;
+}
+
+#name-tooltip-container {
+  height: 50px;
+  width: 140px;
+}
+
+.p-contains-tooltip {
+  display: flex;
+  flex-direction: row;
+  height: 2.25rem; 
+  width: 40px;
+}
+
+.p-tooltip-container {
+  // height: 2.25rem; 
+  width: 82px;
+}
+
+.contains-tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  // width: fit-content;
+}
+
+.tooltip {
+  margin-top: 8px;
+  position: relative;
+}
+
+.tooltip-label {
+  font-family: "Relative Book";
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  padding: 10px 12px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 8px;
+  filter: $reg-shadow-2;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: $arrow-width;
+  margin-left: -5px;
+  margin-top: -5px;
+  background-color:#000;
+}
+
+.triangle:before, .triangle:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+
+.triangle, .triangle:before, .triangle:after {
+  width:  $arrow-width;
+  height: $arrow-width;
+  border-top-right-radius: 33%;
+}
+  
+.triangle { transform: rotate(-60deg) skewX(-30deg) scale(1,.866) }
+.triangle:before { transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%) }
+.triangle:after { transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%) }
+  

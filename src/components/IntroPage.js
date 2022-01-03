@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import fb_icon from '../assets/images/FB.png'
 import build_icon from '../assets/images/Build.png'
@@ -13,9 +14,7 @@ function IntroPage(props) {
    const phrase_container = useRef();
 
    useEffect(() => {
-      for (let i = 0; i < 4; i++) {
-         phrases[i] = document.getElementById(`phrase-${i+1}`);
-      };
+      for (let i = 0; i < 4; i++) phrases[i] = document.getElementById(`phrase-${i+1}`);
       window.addEventListener('keydown', (event) => {
          if ( event.key === "ArrowRight" || event.key === "ArrowDown" ) {
             changeHandler("next");
@@ -56,7 +55,11 @@ function IntroPage(props) {
    }
 
    return (
-      <div className="app intro-app">
+      <motion.div className="app intro-app"
+      initial={{scale:1.1, opacity:0}}
+      animate={{scale:1, opacity:1}}
+      exit={{scale:0.95, opacity:0}}
+      transition={{ duration: 1 }}>
          <div className="name-container">
             <h1>Khang
                <br />
@@ -103,7 +106,7 @@ function IntroPage(props) {
 
             </div>
          </div>
-      </div>
+      </motion.div>
    );
 }
 
@@ -124,8 +127,8 @@ function Phrase(props) {
    return (
       <div className={"phrase-container " + (props.order === 1 ? "phrase-focus" : "phrase-hidden")} id={`phrase-${props.order}`}>
          <div className="phrase-layout">
-            <p className="phrase-content">{props.content}</p>
-            <img className="intro-icon" id={props.imgId} alt="shapes icon" src={props.imgSrc} />
+            <p className="phrase-content select-disabled">{props.content}</p>
+            <img className="intro-icon select-disabled" id={props.imgId} alt="shapes icon" src={props.imgSrc} />
          </div>
          {button}
       </div>
