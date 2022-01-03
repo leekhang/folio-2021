@@ -42,19 +42,13 @@ function AboutPage(props) {
                      <p className="about-p">Designer based in the United States, born and raised in Malaysia 🇲🇾.</p>
                      <p className="about-p">I’m currently take on the Product Design title, but I love dabbling in projects that are creative & dope.</p>
                      <div className="about-p">
-                        <div>Graduated with a double STEM degree</div>
+                        Graduated with a double STEM degree
                         <div className="p-contains-tooltip">
-                           <div>in&nbsp;</div>
-                           <div className="contains-tooltip p-tooltip-container">
-                              <u onMouseEnter={() => setECEHover(1)} onMouseLeave={() => setECEHover(0)}>ECE ⚡️</u>
-                              <Tooltip copy={`Electrical & Computer Engineering`} status={ECEHover} id="ECE-tooltip"/>
-                           </div>
-                           <div>&nbsp;and&nbsp;</div>
-                           <div className="contains-tooltip p-tooltip-container">
-                              <u onMouseEnter={() => setHCIHover(1)} onMouseLeave={() => setHCIHover(0)}>HCI  💻</u>
-                              <Tooltip copy={`Human-Computer Interaction`} status={HCIHover} id="HCI-tooltip"/>
-                           </div>   
-                           <div>.</div>
+                           in&nbsp;
+                           <WordWithTooltip text="ECE ⚡️" setEnter={() => setECEHover(1)} setLeave={() => setECEHover(0)} tooltipText="Electrical & Computer Engineering" hoverStats={ECEHover} id="ECE"/>
+                           &nbsp;and&nbsp;
+                           <WordWithTooltip text="HCI  💻" setEnter={() => setHCIHover(1)} setLeave={() => setHCIHover(0)} tooltipText="Human-Computer Interaction" hoverStats={HCIHover} id="HCI"/>
+                           .
                         </div>
                      </div>
                      <p className="about-p">I main Pacman on Super Smash Bros Ultimate.</p>
@@ -69,6 +63,15 @@ function AboutPage(props) {
             
          </div>               
       </motion.div>
+   );
+}
+
+function WordWithTooltip(props) {
+   return(
+      <span className="contains-tooltip p-tooltip-container">
+         <u onMouseEnter={props.setEnter} onMouseLeave={props.setLeave}>{props.text}</u>
+         <Tooltip copy={props.tooltipText} status={props.hoverStats} id={`${props.id}-tooltip`}/>
+      </span>   
    );
 }
 
