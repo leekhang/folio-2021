@@ -1,0 +1,317 @@
+@import "../Base/Variables";
+
+/* 
+  For All Sizes ---------------------------------------
+*/
+
+
+// Applied ---------------
+
+#applied-splash-0 {
+  transform: scale(1.0) rotateX(8deg) rotate(-4deg);
+  border-radius: 0px;
+
+  &:hover { 
+    transform: scale(1.05) rotateX(2deg) rotate(-2deg);
+    transition: $ease-out-25;
+  }
+}
+
+// Strange ---------------
+
+#strange-splash-img-container {
+  perspective-origin: top;
+}
+
+#strange-splash-0 {
+  transform: scale(1.0) rotateX(20deg) rotate(-8deg);
+}
+
+// Popper ---------------
+
+#popper-splash-0, #popper-splash-1 {
+  transform: scale(1.0) rotateX(12deg) rotate(6deg);
+  transition: $transition-50;
+
+  &:hover {
+    transform: scale(1.05) rotateX(4deg) rotate(5deg);
+    transition: $ease-out-25;
+  }
+}
+
+#popper-splash-0:hover {
+  z-index: 2;
+}
+
+// Elios ---------------
+
+#elios-project-app #top-back-btn-container {
+  display: none;
+}
+
+/* 
+  Mobile ---------------------------------------------
+*/
+
+@media only screen and (min-width: 20rem) {
+
+  // Applied ---------------
+
+  #applied-splash-img-container {
+    display: flex;
+    justify-content: center;
+    overflow-y: visible;
+    margin-bottom: 2rem;
+  }
+  
+  #applied-splash-0 {
+    height: 100%;
+  }
+
+  // Strange Machines -----------------
+
+  #strange-splash-img-container {
+    display: flex;
+    justify-content: center;
+    overflow-y: visible;
+    flex: 0 0 250px;
+  }
+
+  #strange-splash-0 {
+    position: absolute;
+    height: 200px;
+    transform-origin: center center;
+  }
+
+    // Popper -----------------
+
+    #popper-splash-img-container {
+      flex: 0 0 400px;
+    }
+  
+    #popper-splash-0 {
+      // width: 50%;
+      height: 90%;
+      top: 0;
+      left: 5%;
+    }
+  
+    #popper-splash-1 {
+      // width: 50%;
+      height: 90%;
+      top: 56px;
+      right: 5%;
+    }
+
+}
+
+/* Large Mobile ------ */
+@media only screen and (min-width: 27rem) { 
+
+    // Applied ---------------
+    #applied-splash-img-container {
+      flex: 1 1 40vw;
+      margin-bottom: 0;
+    }
+
+    #applied-splash-0 {
+      height: 80%;
+    }
+}
+
+/* Tablets and small desktops ------ */
+@media only screen and (min-width: 50rem) {
+
+  // Applied ---------------
+
+  #applied-splash-img-container {
+    flex: 0 0 360px;
+    align-items: center;
+  }
+  
+  #applied-splash-0 {
+    position: absolute;
+    top: 0;
+    height: 300px;
+  }
+
+  // Strange Machines ---------------
+
+  #strange-splash-img-container {
+    flex: 0 0 350px;
+    overflow-y: visible;
+  }
+
+  #strange-splash-0 {
+    position: absolute;
+    top: -10%;
+    height: 360px;
+    transform: scale(1.0) rotateX(32deg) rotate(-6deg);
+    transform-origin: center bottom;
+    &:hover { transform: scale(1.05) rotateX(20deg) rotate(-4deg) }
+  }
+}
+
+/* Large desktops ------ */
+@media only screen and (min-width: 60rem) {
+
+  // Applied ---------------
+
+  #applied-project-section-content {
+    width: 60%;
+  }
+
+  #applied-splash-img-container {
+    flex: 1 1 200px;
+  }
+  
+  #applied-splash-0 {
+    position: static;
+    width: 440px;
+    height: fit-content;
+    margin-top: 0rem;
+  }
+
+  // Strange Machines -----------------
+
+  #strange-project-section-content {
+    width: 60%;
+  }
+  
+  #strange-splash-img-container {
+    flex: 1 1 200px;
+    // align-items: center;
+  }
+  
+  #strange-splash-0 {
+    position: static;
+    width: 420px;
+    margin-top: 5rem;
+  }
+
+  // Elios -----------------
+
+  #elios-project-section-content {
+    width: 820px;
+  }
+}
+
+/* 
+Large desktops --------------------------------------- 
+*/
+
+@media only screen and (min-width: 75rem) {
+
+  // Priv ---------------------
+
+  #priv-project-section-content {
+    width: 100%;
+  }
+
+  #priv-project-app .project-section-text {
+    width: 100%;
+
+    .section-copy {
+      width: 800px;
+    }
+  }
+
+  #priv-splash-img-container {
+    height: 0;
+  }
+
+
+  // ABP ---------------------
+
+  #abp-project-section-content {
+    width: 100%;
+  }
+
+  #abp-project-app .project-section-text {
+    width: 100%;
+
+    .section-copy {
+      width: 800px;
+    }
+  }
+
+  .abp-slider-item, .abp-asset {
+    height: 640px !important;
+  }
+
+  // Applied -----------------
+
+  #applied-project-section-content {
+    width: 680px;
+  }
+  
+  #applied-splash-img-container {
+    flex: 1 1 300px;
+  }
+  
+  #applied-splash-0 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 565px;
+    height: fit-content;
+    border-radius: 0px;
+    margin-top: 2rem;
+  }
+
+  .applied-slider-item, .applied-asset {
+    height: 280px !important;
+  }
+
+  // Strange Machines -----------------
+
+  #strange-project-section-content {
+    width: 680px;
+  }
+  
+  #strange-splash-img-container {
+    flex: 1 1 300px;
+  }
+  
+  #strange-splash-0 {
+    position: absolute;
+    top: 0;
+    right: -24px;
+    width: 560px;
+  }
+
+  .strange-slider-item, .strange-asset {
+    border-radius: 8px !important; 
+    width: 800px !important;
+  }
+
+  .strange-asset {
+    height: 100%;
+  }
+
+  .strange-slider-item {
+    height: fit-content !important;
+  }
+
+  // Popper -----------------
+
+  #popper-project-section-content {
+    width: 720px;
+  }
+
+  #popper-splash-0 {
+    width: 220px;
+    top: 0;
+    left: -50px;
+  }
+
+  #popper-splash-1 {
+    width: 220px;
+    top: 250px;
+    left: 100px;
+  }
+
+  .popper-slider-item, .popper-asset {
+    height: 640px !important;
+  }
+}

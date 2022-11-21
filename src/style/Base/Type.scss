@@ -1,0 +1,103 @@
+@import "./Variables";
+
+/* Mabry Pro Font Family --------------------------------- */ 
+
+@font-face { 
+	font-family: 'Mabry Black';
+	src: url('../../assets/fonts/mabry-black-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Bold';
+	src: url('../../assets/fonts/mabry-bold-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Med';
+	src: url('../../assets/fonts/mabry-medium-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Reg';
+	src: url('../../assets/fonts/mabry-regular-pro.otf');
+}
+
+@font-face { 
+	font-family: 'Mabry Light';
+	src: url('../../assets/fonts/mabry-light-pro.otf');
+}
+
+/* Relative Font Family --------------------------------- */ 
+
+@font-face { 
+	font-family: 'Relative Book';
+	src: url('../../assets/fonts/relative-book-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Relative Medium';
+	src: url('../../assets/fonts/relative-medium-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Relative Bold';
+	src: url('../../assets/fonts/relative-bold-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Relative Black';
+	src: url('../../assets/fonts/relative-black-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Relative Faux';
+	src: url('../../assets/fonts/relative-faux-book-trial.otf');
+}
+
+/* Peggs Font Family --------------------------------- */ 
+
+@font-face { 
+	font-family: 'Peggs Bold';
+	src: url('../../assets/fonts/peggs-bold-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Peggs Med';
+	src: url('../../assets/fonts/peggs-medium-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Peggs Reg';
+	src: url('../../assets/fonts/peggs-regular-trial.otf');
+}
+
+@font-face { 
+	font-family: 'Peggs Light';
+	src: url('../../assets/fonts/peggs-light-trial.otf');
+}
+
+h1, p {
+  font-family: 'Peggs Reg';
+  line-height: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+a { 
+	text-decoration: none;
+}
+
+u {
+  white-space: nowrap;
+  text-decoration: none;
+	&:hover { animation: minitada 1.2s linear }
+}
+
+strong {
+	font-family: 'Relative Bold';
+	font-weight: 1000;
+}
+
+/* ---------- Responsive Web Adjustments ---------- */
+
+

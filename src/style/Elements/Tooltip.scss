@@ -1,0 +1,64 @@
+@import "../Base/Variables";
+
+$arrow-height: 6px;
+$arrow-width: 10px;
+
+.hidden {
+  display: none;
+}
+
+.contains-tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.tooltip {
+  margin-top: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.tooltip-label {
+  font-family: "Relative Book";
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  padding: 10px 12px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+  filter: $reg-shadow-2;
+  will-change: filter;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: $arrow-width;
+  margin-left: -5px;
+  margin-top: -5px;
+  background-color:#000;
+}
+
+.triangle:before, .triangle:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+
+.triangle, .triangle:before, .triangle:after {
+  width:  $arrow-width;
+  height: $arrow-width;
+  border-top-right-radius: 33%;
+}
+
+.triangle { transform: rotate(-60deg) skewX(-30deg) scale(1,.866) }
+.triangle:before { transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%) }
+.triangle:after { transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%) }
+

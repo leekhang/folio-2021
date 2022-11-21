@@ -1,0 +1,321 @@
+@import "../Base/Variables";
+
+.project-app {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to top,rgb(251, 246, 237) 50%,rgb(255, 255, 255) 100%);
+}
+
+#project-body-container {
+  height: fit-content;
+  min-height: 100vh; // added for WIP sites
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; // added for WIP sites
+}
+
+.project-section-wrapper {
+  height: fit-content;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+}
+
+.project-section {
+  z-index: 1;
+}
+
+.splash-img-container {
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: bottom;
+}
+
+.project-title {
+  font-family: 'Relative Book';
+  z-index: 2;
+}
+
+.project-catchphrase {
+  font-family: 'Relative Faux';
+  font-weight: 400;
+  color: $body-copy;
+}
+
+.project-desc-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.desc-title {
+  font-family: 'Relative Bold';
+  color: $subheader-black;
+  opacity: 75%;
+}
+
+.desc-content {
+  font-family: 'Relative Book';
+  color: $header-black;
+}
+
+.section-header {
+  font-family: 'Relative Bold';
+}
+
+.section-subheader {
+  font-family: 'Relative Bold';
+  color: $body-copy;
+}
+
+.section-copy {
+  font-family: 'Relative Book';
+  color: $body-copy;
+}
+
+.splash-img {
+  position: absolute;
+  border-radius: 12px;
+  filter: $reg-shadow-4;
+  transition: $transition-50;
+  &:hover { transition: $ease-out-25 }
+}
+
+.section-copy-link {
+  color: $content-link;
+
+  &:visited {
+    color: $content-link;
+  }
+}
+
+
+/* ---------- Responsive Web Adjustments ---------- */
+
+/* Mobile ------ */
+@media only screen and (min-width: 20rem) {
+
+  #project-body-container {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+  }
+
+  .project-section-wrapper {
+    padding-bottom: 2rem;
+  }
+
+  .project-section {
+    order: 2;
+    width: 100%;
+    & > * { margin-bottom: 0.5rem } // maybe no need
+  }
+
+  .splash-img-container {
+    order: 1;
+    height: fit-content;
+    width: 100%;
+    flex: 1 1 50vw;
+  }
+
+  .project-title { // do small
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+  }
+
+  .project-catchphrase {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0;
+  }
+
+  .project-desc {
+    // flex: 1 1 150px;
+    margin-right: 1.5rem;
+  }
+
+  .desc-title {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.2px;
+    margin-bottom: 0rem;
+  }
+  
+  .desc-content {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .section-header {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    letter-spacing: 0;
+  }
+
+  .section-copy {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+  }
+
+  .section-copy-link > u {
+    border-bottom: 2px dotted $content-link;
+  }
+}
+
+/* Large Mobile ------ */
+@media only screen and (min-width: 27rem) { 
+  #project-body-container {
+    width: 24rem;
+    padding: 4rem 0rem 3rem;
+  }
+}
+
+/* Tablets and small desktops ------ */
+@media only screen and (min-width: 50rem) {
+  
+  #project-body-container {
+    width: 100%;
+    padding: 4.5rem 7rem 0rem;
+  }
+
+  .project-section-wrapper {
+    padding-bottom: 2.5rem;
+  }
+
+  .project-section {
+    order: 2;
+    width: 100%;
+    & > p { margin-bottom: 0.75rem } // maybe no need
+  }
+
+  .splash-img-container {
+    order: 1;
+    height: fit-content;
+    width: 100%;
+    flex: 1 1 50vw;
+  }
+
+  .project-title {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -1px;
+  }
+
+  .project-catchphrase {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    // max-width: 800px;
+  }
+
+  .project-desc {
+    margin-right: 2rem;
+  }
+
+  .desc-title {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+    margin-bottom: 0.25rem;
+  }
+  
+  .desc-content {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .section-header {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.2px;
+  }
+
+  .section-subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .section-copy {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 640px;
+  }
+}
+
+/* Small desktops ------ */
+@media only screen and (min-width: 60rem) {
+
+  #project-body-container {
+    width: 100%;
+    padding: 7.5rem 1.5rem 1.5rem;
+  }
+
+  .project-header {
+    flex-direction: row;
+  }
+
+  .project-section {
+    order: 1;
+    width: 60%;
+    & > h2 { margin-bottom: 1.25rem }
+    & > h3 { margin-bottom: 0.25rem }
+    & > p { margin-bottom: 1rem }
+  }
+
+  .splash-img-container {
+    display: block;
+    order: 2;
+    height: 500px;
+    flex: 1 1 100px;
+    perspective: 1000px;
+    perspective-origin: bottom; 
+  }
+
+}
+
+/* Large desktops ------ */
+@media only screen and (min-width: 75rem) {
+
+  #project-body-container {
+    width: 1150px;
+    padding: 7.5rem 0px 5rem;
+  }
+
+  .project-section {
+    order: 1;
+  }
+
+  .project-catchphrase {
+    font-size: 4.5rem;
+    line-height: 4.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .splash-img-container {
+    height: 500px;
+    flex: 1 1 100px;
+    perspective: 1000px;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .section-copy-link > u {
+    border-bottom: 2px solid $content-link;
+  }
+}
+
+/* ---------- End of Responsive Web Section ---------- */

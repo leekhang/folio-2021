@@ -1,0 +1,90 @@
+@import "../Base/Variables";
+
+.back-btn {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: 0.75;
+  transition: $transition-10;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: $transition-10;
+  }
+}
+
+.back-arrow {
+  margin-right: 4px;
+}
+
+/* ---------- Responsive Web Adjustments ---------- */
+
+/* Mobile ------ */
+@media only screen and (min-width: 20rem) {
+  
+  .back-btn {
+    margin: 0;
+  }
+
+  #top-back-btn-container {
+    display: none;
+  }
+
+  #bottom-back-btn-container {
+    padding-bottom: 0;
+  }
+
+  .back-arrow {
+    width: 10px;
+    margin-right: 4px;
+  }
+}
+
+/* Tablets and small desktops ------ */
+@media only screen and (min-width: 50rem) {
+
+  #top-back-btn-container {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  #bottom-back-btn-container {
+    padding-bottom: 3rem;
+  }
+
+  .back-btn {
+    margin-top: 0;
+  }
+
+  .back-arrow {
+    width: 10px;
+    margin-right: 4px;
+  }
+}
+
+/* Tablets and small desktops ------ */
+@media only screen and (min-width: 60rem) {
+  #top-back-btn-container {
+    margin-top: 0rem;
+  }
+}
+
+
+/* Large desktops ------ */
+@media only screen and (min-width: 75rem) {
+
+  .back-btn {
+    margin-top: 2rem;
+  }
+
+  .back-arrow {
+    width: 14px;
+  }
+
+  #top-back-btn {
+    display: flex;
+  }
+}

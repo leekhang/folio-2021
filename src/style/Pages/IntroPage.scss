@@ -1,0 +1,277 @@
+@import "../Base/Variables";
+
+/* ---------- Global Declarations ---------- */
+
+// Global Colors
+h1 { color: $orange }
+p { color: $header-black }
+
+/* App ------ */
+.intro-app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  // justify-content: flex-end;
+  overscroll-behavior-y: none;
+}
+
+/* Name Title ------ */
+.name-container {
+  position: fixed;
+
+  .name-letter-l {
+    display: inline-block;
+  }
+
+  .name-letter-e {
+    display: inline-block;
+    transform: rotate(-30deg);
+  }
+}
+
+/* Phrase Section ------ */
+.phrase-list-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.phrase-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.phrase-layout { position: relative }
+
+.intro-icon { position: absolute }
+
+.phrase-growing-container { transition: $transition-50 }
+#FB-icon { animation: rotation 40s infinite linear }
+#Build-icon { animation: step-rotation 4s infinite step-start }
+#Story-icon { animation: wiggle 2s infinite ease-in-out }
+#Child-icon { animation: tada 2s infinite linear }
+
+.down-btn {
+  border: none;
+  border-radius: 100px;
+  background: none;
+  flex-shrink: 0;
+  
+  &:hover {
+    background: $header-black;
+    img { filter: brightness(0) invert(1) }
+  }
+}
+
+/* Phrase States ------ */
+.phrase-hidden {
+  opacity: 0;
+  transition: $transition-25;
+}
+
+.phrase-focus {
+  p, img, button { opacity: 1 }
+
+  img { transform: scale(1.1) }
+
+  p, img { transition: $transition-25 }
+  .down-btn > img { transition: $transition-1 }
+}
+
+.phrase-unfocus {
+  p, img { opacity: 10%; }
+  button { opacity: 0% }
+
+  img { transform: scale(1) }  
+
+  p, img { transition: $transition-25 }
+  .down-btn > img { transition: $transition-1 }
+}
+
+
+
+/* ---------- Responsive Web Adjustments ---------- */
+
+/* Mobile ------ */
+@media only screen and (min-width: 20rem) {
+  
+  .intro-app {
+    padding: 1.5rem; // 24px
+  }
+
+  // Typography
+  h1, p { font-size: 1.5rem }
+  .name-letter-l { margin-right: -2px }
+  .name-letter-e { margin-right: 1px } 
+
+
+  // Phrase Section
+  .phrase-list-container {
+    justify-content: center;
+  }
+
+  .phrase-layout {
+    margin-bottom: 0.75rem;
+    flex: 1 1 100%;
+  }
+
+  .phrase-growing-container {
+    // height: calc(5 * 0.75rem);
+    height: 3.75rem;
+  }
+
+  .down-btn {
+    width: 2.5rem; // 88px
+    height: 2.5rem; // 88px
+    border: 2px solid $header-black;
+
+
+    img { width: 1rem; }
+  }
+
+  #FB-icon {
+    width: 56px;
+    right: -8px;
+    bottom: -24px;
+  }
+  
+  #Build-icon {
+    width: 48px;
+    left: -24px;
+    top: -38px;
+  }
+  
+  #Story-icon {
+    width: 56px;
+    right: -4px;
+    top: -28px;
+  }
+  
+  #Child-icon {
+    width: 40px;
+    left: -38px;
+    top: 12px;
+  }
+}
+
+/* Tablets and small desktops ------ */
+@media only screen and (min-width: 50rem) {
+
+  .intro-app {
+    padding: 2.5rem 3rem 2.5rem 2.5rem; // 40px 48px 40px 40px
+  }
+
+  // Typography
+  h1, p { font-size: 3rem } 
+  .name-letter-l { margin-right: -6px }
+  .name-letter-e { margin-right: 3px }
+
+  // Phrase Section
+  .phrase-list-container {
+    justify-content: flex-end;
+  }
+
+  .phrase-layout {
+    margin-bottom: 1.5rem; //
+    width: 30rem;
+  }
+  
+  .phrase-growing-container {
+    // height: calc(5 * 1.5rem);
+    height: 7.5rem;
+  }
+
+  .down-btn {
+    width: 4rem; // 88px
+    height: 4rem; // 88px
+    border: 4px solid $header-black;
+
+    img { width: 1.75rem; }
+  }
+
+  #FB-icon {
+    width: 108px;
+    right: -8px;
+    bottom: -40px;
+  }
+  
+  #Build-icon {
+    width: 96px;
+    left: -68px;
+    top: -56px;
+  }
+  
+  #Story-icon {
+    width: 112px;
+    right: 8px;
+    top: -48px;
+  }
+  
+  #Child-icon {
+    width: 120px;
+    left: -112px;
+    top: 6px;
+  }
+}
+
+
+/* Large desktops ------ */
+@media only screen and (min-width: 75rem) {
+
+  .intro-app {
+    flex-direction: row;
+    padding: 2.5rem 3rem 2.5rem 2.5rem; // 40px 48px 40px 40px
+  }
+
+  // Typography
+  h1, p { font-size: 4.5rem } 
+
+  // Phrase Section
+  .phrase-layout {
+    margin-bottom: 2.25rem; // 40px
+    width: 40rem; // 640px
+  }
+
+  .phrase-growing-container {
+    // height: calc(5 * 2.25rem); 
+    height: 11.25rem; 
+  }
+
+  .down-btn {
+    width: 5.5rem; // 88px
+    height: 5.5rem; // 88px
+    border: 4px solid $header-black;
+
+    img { width: 2.25rem; }
+  }
+
+  #FB-icon {
+    width: 156px;
+    right: -12px;
+    bottom: -64px;
+  }
+  
+  #Build-icon {
+    width: 140px;
+    left: -112px;
+    top: -64px;
+  }
+  
+  #Story-icon {
+    width: 180px;
+    right: -24px;
+    top: -80px;
+  }
+  
+  #Child-icon {
+    width: 190px;
+    left: -200px;
+    top: 12px;
+  }
+}
+
+

@@ -2,30 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import ScrollToTop from './components/Pages/ScrollToTop';
 // import reportWebVitals from './reportWebVitals';
 
 /* Import Styles ------------------------------ */ 
 
 // Base Styles
-import './style/reset.css';
-import './style/Variables.scss';
-import './style/Type.scss';
-
-// Component Styles
-import './style/Tooltip.scss';
-import './style/NavBar.scss';
+import './style/Base/reset.scss';
+import './style/Base/Variables.scss';
+import './style/Base/Type.scss';
 
 // Page Styles
-import './style/IntroPage.scss';
-import './style/WorkPage.scss';
-import './style/AboutPage.scss';
-import './style/ProjectPage.scss';
+import './style/Pages/IntroPage.scss';
+import './style/Pages/WorkPage.scss';
+import './style/Pages/AboutPage.scss';
+import './style/Pages/ProjectPage.scss';
+import './style/Pages/ProjectPageSpecs.scss';
+
+// Component Styles
+import './style/Elements/Tooltip.scss';
+import './style/Elements/NavBar.scss';
+import './style/Elements/BackButton.scss';
+import './style/Elements/ProjectGallery.scss';
 
 /* Render Web App ------------------------------ */ 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      {/* <ScrollToTop/> */}
       <App />
     </BrowserRouter>
   </React.StrictMode>,

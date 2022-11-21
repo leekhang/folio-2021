@@ -1,0 +1,87 @@
+
+/* ---------- Color Definitions ---------- */
+
+$orange: #FF9431;
+$header-black: #444444;
+$subheader-black: #929aa5;
+$content-black: #646464;
+$body-copy: #32312F;
+$content-link: #0078F0;
+
+$tilt: 9deg;
+$max-page-width: 1200px;
+
+$hard-shadow-depth-mobile: 8px;
+$hard-shadow-depth: 16px;
+$hard-shadow-color: rgba(60, 43, 12, 0.5);
+
+$reg-shadow-1: drop-shadow(0 20px  17px rgba(89, 64, 19,.12));
+$reg-shadow-2: drop-shadow(0 12px  10px rgba(89, 64, 19,.1));
+$reg-shadow-3: drop-shadow(0 6px   5px  rgba(89, 64, 19,.08));
+$reg-shadow-4: drop-shadow(0 2px   2px  rgba(89, 64, 19,.04));
+
+$hov-shadow-1: drop-shadow(0 20px 17px rgba(89, 64, 19,.2));
+$hov-shadow-2: drop-shadow(0 12px 10px rgba(89, 64, 19,.18));
+$hov-shadow-3: drop-shadow(0 6px  5px  rgba(89, 64, 19,.16));
+$hov-shadow-4: drop-shadow(0 2px  2px  rgba(89, 64, 19,.04));
+
+$transition-1: all 0.01s cubic-bezier(.44,.01,.48,1);
+$transition-10: all 0.10s cubic-bezier(.44,.01,.48,1);
+$transition-25: all 0.25s cubic-bezier(.44,.01,.48,1);
+$transition-50: all 0.5s cubic-bezier(.44,.01,.48,1);
+
+$ease-out-25: all 0.25 cubic-bezier(.17,.67,.83,.67);
+
+.select-disabled {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---------- Keyframe Definitions ---------- */
+
+@keyframes rotation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(359deg) }
+}
+  
+@keyframes step-rotation {
+  0% { transform: rotate(0deg) }
+  10% { transform: rotate(-36deg) }
+  20% { transform: rotate(-72deg) }
+  30% { transform: rotate(-108deg) }
+  40% { transform: rotate(-144deg) }
+  50% { transform: rotate(-180deg) }
+  60% { transform: rotate(-216deg) }
+  70% { transform: rotate(-252deg) }
+  80% { transform: rotate(-288deg) }
+  90% { transform: rotate(-324deg) }
+  100% { transform: rotate(0deg) }
+}
+
+@keyframes wiggle {
+  0%   { transform: rotate(0deg) }
+  25%  { transform: rotate(-10deg) scale(1.2) }
+  50%  { transform: rotate(10deg)  }
+  75%  { transform: rotate(-5deg) scale(1) }
+  100% { transform: rotate(0deg)  }
+}
+
+@keyframes tada {
+  0% { transform: scaleX(1) }
+  8% { transform: scale3d(.9,.9,.9) rotate(-3deg) }
+  24%,40%,56%,72% { transform: scale3d(1.1,1.1,1.1) rotate(3deg) }
+  16%,32%,48%,64% { transform: scale3d(1.1,1.1,1.1) rotate(-3deg) }
+  88% { transform: scaleX(1) rotate(0deg) }
+  to { transform: scaleX(1) }
+}
+
+@keyframes minitada {
+  5% { transform: rotate(-1deg) }
+  10%, 30%, 50%, 70% { transform: rotate(2deg) }
+  20%, 40%, 60%, 80% { transform: rotate(-2deg) }
+  90% { transform: rotate(0deg) }
+}

@@ -1,0 +1,384 @@
+@import "../Base/Variables";
+
+.work-app {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#work-body-container {
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title-section {
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 16px 0px 56px;
+}
+
+.page-title {
+  font-family: "Relative Book";
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: $header-black;
+  text-align: center;
+}
+
+.case-study {
+  // width: fit-content;
+  height: fit-content;
+  transition: $transition-25;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.44,.01,.48,1);
+  }
+
+  img { 
+    display: block;
+    -webkit-user-drag: none;
+    transition: filter 0.25s cubic-bezier(.44,.01,.48,1);
+    margin: none;
+
+    &:hover {
+      filter: $hov-shadow-1 $hov-shadow-2 $hov-shadow-3 $hov-shadow-4 !important;
+      transition: filter 0.25s cubic-bezier(.44,.01,.48,1);
+    }
+  }
+}
+
+.main-section {
+  flex: 1 1 auto;
+  width: 100%;
+  height: calc(#{$max-page-width} * 1.2);
+  overflow: visible;
+
+  perspective-origin: bottom;
+  
+  .case-img { will-change: filter }
+}
+
+#priv-project {
+  &:hover { transform: scale(1.02) rotate(-4deg) }
+}
+
+#abp-project {
+  &:hover { transform: scale(1.02) rotate(4deg) }
+}
+
+
+/* ---------- Responsive Web Adjustments ---------- */
+
+/* 
+Mobile ------------------------------------------
+*/
+
+@media only screen and (min-width: 20rem) {
+  
+  .work-app {
+    padding: 1.5rem; // 24px
+  }
+
+  #work-body-container {
+    padding: 3.5rem 0px 2rem;
+  }
+
+  .page-title-section {
+    display: none;
+  }
+
+  .main-section {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    perspective: 1500px;
+  }
+
+  .case-study {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  #priv-project, #applied-project,  #elios-project {
+    transform: rotateX($tilt) rotate(-8deg);
+  }
+
+  #abp-project, #popper-project, #strange-project {
+    transform: rotateX($tilt) rotate(8deg);
+  }
+
+  #priv-project {
+    padding-right: calc(100vw * 0.15);
+  }
+
+  #abp-project {
+    padding-left: calc(100vw * 0.1);
+  }
+
+  #applied-project {
+    padding-right: calc(100vw * 0.4);
+    margin-bottom: 0;
+  }
+
+  #popper-project {
+    padding-left: calc(100vw * 0.4);
+    margin-top: -1.5rem;
+  }
+
+  #priv-img, #abp-img, #applied-img, #elios-img {
+    filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+            drop-shadow(-2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
+  }
+
+  #abp-img, #popper-img, #strange-img {
+    filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+            drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
+  }
+
+  #priv-img, #abp-img, #applied-img {
+    width: calc(100vw * 0.45);
+  }
+
+  #overview-img {
+    width: calc(100vw * 0.7);
+  }
+
+  #popper-img {
+    width: calc(100vw * 0.24);
+  }
+
+  #strange-img {
+    width: calc(100vw * 0.8);
+  }
+
+  #elios-img {
+    width: calc(100vw * 0.3);
+  }
+
+}
+
+
+/*
+Tablets and small desktops ------------------   
+*/
+@media only screen and (min-width: 50rem) {
+
+  #work-body-container {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .page-title-section {
+    display: block;
+    margin: 32px 0px 40px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .case-study {
+    position: absolute;
+  }
+
+  .main-section {
+    display: block;
+    height: calc(100vw * 1.15);
+    perspective: 1000px;
+  }
+
+  #priv-project {
+    top: 2%;
+    left: 4%;
+    transform: rotateX($tilt) rotate(-10deg);
+    
+    #priv-img {
+      width: calc(100vw * 0.3);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(-2px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+  } 
+
+  #abp-project {
+    top: 0;
+    right: 4%;
+    padding: 0;
+    transform: rotateX($tilt) rotate(15deg);
+    
+    #abp-img {
+      width: calc(100vw * 0.3);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(4px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+
+  }
+
+  #applied-project {
+    top: 24%;
+    left: 16%;
+    padding: 0;
+    transform: rotateX($tilt) rotate(12deg);
+  
+    #applied-img {
+      width: calc(100vw * 0.32);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(3px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+  
+    &:hover {
+      transform: scale(1.1) rotate(-1deg);
+    }
+  }
+
+  #popper-project {
+    top: 35%;
+    right: 24%;
+    padding: 0;
+    transform: rotateX($tilt) rotate(-12deg);
+    
+    #popper-img {
+      width: calc(100vw * 0.16);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(-8px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+  
+    &:hover {
+      transform: scale(1.1) rotate(-2deg);
+    }
+  }
+  
+  #elios-project {
+    top: 45%;
+    left: 7%;
+    transform: rotateX($tilt) rotate(-12deg);
+  
+    #elios-img {
+      width: calc(100vw * 0.22);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(-3px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+  
+    &:hover {
+      transform: scale(1.1) rotate(-4deg);
+    }
+  }
+  
+  #strange-project {
+    top: 53%;
+    right: 1%;
+    transform: rotateX($tilt) rotate(4deg);
+  
+    #strange-img {
+      width: calc(100vw * 0.45);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(2px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+  
+    &:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+  }
+}
+
+
+/* 
+Large desktops ------------------ 
+*/
+
+@media only screen and (min-width: 75rem) {
+
+  #work-body-container {
+    padding: 120px 0px 80px;
+  }
+
+  .page-title-section {
+    margin: 16px 0px 56px;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .case-study {
+    position: absolute;
+  }
+
+  .main-section {
+    height: calc(#{$max-page-width} * 1.2);
+    display: block;
+    perspective: 1000px;
+  }
+
+  #priv-project {
+    top: 0.8%;
+    left: 2%;
+    
+    #priv-img {
+      width: calc(#{$max-page-width}*0.35);
+    }
+  } 
+
+  #overview-project {
+    top: 17%;
+    left: 10%;
+  
+    #overview-img { 
+      width: calc(#{$max-page-width}*0.52);
+    }
+  }
+
+  #abp-project {
+    top: 0;
+    right: 4%;
+    padding: 0;
+    transform: rotateX($tilt) rotate(10deg);
+
+      #abp-img {
+        width: calc(#{$max-page-width}*0.36);
+      }
+  }
+  
+  #applied-project {
+    top: 27%;
+    left: 10%;
+    width: fit-content;
+
+    #applied-img {
+      width: calc(#{$max-page-width}*0.35);
+    }
+  }
+
+  #popper-project {
+    top: 41%;
+    right: 26%;
+    width: fit-content;
+    
+    #popper-img {
+      width: calc(#{$max-page-width}*0.16);
+    }
+  }
+  
+  #elios-project {
+    top: 50%;
+    left: 5%;
+  
+    #elios-img {
+      width: calc(#{$max-page-width}*0.24);
+    }
+  }
+  
+  #strange-project {
+    top: 58%;
+    right: 3%;
+  
+    #strange-img {
+      width: calc(#{$max-page-width}*0.5);
+    }
+  }
+}
+
+/* ---------- End of Responsive Web Section ---------- */

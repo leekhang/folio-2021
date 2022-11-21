@@ -1,0 +1,71 @@
+/* Reseting browser default properties */
+
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:hover { cursor: pointer; }
+}
+
+.app {
+	background-color: #FBF6ED;
+	background: linear-gradient(to top,rgb(251, 246, 237) 50%,rgb(255, 255, 255) 100%);
+}
+
+/* ---------- Responsive Web Adjustments ---------- */
+
+.body-container {
+  overflow: visible;
+  display: flex;
+}
+
+/* Mobile ------ */
+@media only screen and (min-width: 20rem) {
+
+  .body-container {
+    width: 100%;
+  }
+	
+}
+	
+/* Tablets and small desktops ------ */
+@media only screen and (min-width: 50rem) {
+	
+}
+	
+	
+/* Large desktops ------ */
+@media only screen and (min-width: 75rem) {
+
+  .body-container {
+    width: 1150px;
+  }
+
+}
