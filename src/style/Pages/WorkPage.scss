@@ -101,63 +101,67 @@ Mobile ------------------------------------------
 
   .case-study {
     position: static;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
-  #priv-project, #applied-project,  #elios-project {
-    transform: rotateX($tilt) rotate(-8deg);
+  #priv-project, #applied-project, #popper-project {
+    transform: rotateX($tilt) rotate(-7deg);
   }
 
-  #abp-project, #popper-project, #strange-project {
-    transform: rotateX($tilt) rotate(8deg);
+  #abp-project, #strange-project, #elios-project {
+    transform: rotateX($tilt) rotate(7deg);
   }
 
   #priv-project {
-    padding-right: calc(100vw * 0.15);
+    padding-right: calc(100vw * 0.3);
   }
 
   #abp-project {
-    padding-left: calc(100vw * 0.1);
+    padding-left: calc(100vw * 0.3);
   }
 
   #applied-project {
-    padding-right: calc(100vw * 0.4);
-    margin-bottom: 0;
+    padding-right: calc(100vw * 0.25);
+    margin-bottom: 3rem;
   }
 
   #popper-project {
-    padding-left: calc(100vw * 0.4);
-    margin-top: -1.5rem;
+    padding-right: calc(100vw * 0.4);
+    margin-bottom: -1rem;
   }
 
-  #priv-img, #abp-img, #applied-img, #elios-img {
+  #elios-project {
+    padding-left: calc(100vw * 0.4);
+  }
+
+  #priv-img, #abp-img, #applied-img, #popper-img {
     filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
             drop-shadow(-2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
   }
 
-  #abp-img, #popper-img, #strange-img {
+  #abp-img, #strange-img, #elios-img {
     filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
             drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
   }
 
-  #priv-img, #abp-img, #applied-img {
-    width: calc(100vw * 0.45);
+  #priv-img, #abp-img {
+    width: calc(100vw * 0.5);
   }
 
-  #overview-img {
-    width: calc(100vw * 0.7);
-  }
-
-  #popper-img {
-    width: calc(100vw * 0.24);
+  #applied-img {
+    width: calc(100vw * 0.5);
   }
 
   #strange-img {
-    width: calc(100vw * 0.8);
+    width: calc(100vw * 0.75);
+  }
+
+  #popper-img {
+    width: calc(100vw * 0.27);
   }
 
   #elios-img {
-    width: calc(100vw * 0.3);
+    width: calc(100vw * 0.34);
   }
 
 }
@@ -194,6 +198,7 @@ Tablets and small desktops ------------------
   #priv-project {
     top: 2%;
     left: 4%;
+    padding: 0;
     transform: rotateX($tilt) rotate(-10deg);
     
     #priv-img {
@@ -218,13 +223,13 @@ Tablets and small desktops ------------------
   }
 
   #applied-project {
-    top: 24%;
+    top: 25%;
     left: 16%;
     padding: 0;
     transform: rotateX($tilt) rotate(12deg);
   
     #applied-img {
-      width: calc(100vw * 0.32);
+      width: calc(100vw * 0.30);
       filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
               drop-shadow(3px $hard-shadow-depth 0px $hard-shadow-color);
     }
@@ -236,30 +241,48 @@ Tablets and small desktops ------------------
 
   #popper-project {
     top: 35%;
-    right: 24%;
+    right: 20%;
     padding: 0;
     transform: rotateX($tilt) rotate(-12deg);
     
     #popper-img {
-      width: calc(100vw * 0.16);
+      width: calc(100vw * 0.13);
       filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
-              drop-shadow(-8px $hard-shadow-depth 0px $hard-shadow-color);
+              drop-shadow(-4px $hard-shadow-depth 0px $hard-shadow-color);
     }
   
     &:hover {
       transform: scale(1.1) rotate(-2deg);
     }
   }
-  
-  #elios-project {
+
+  #strange-project {
     top: 45%;
     left: 7%;
-    transform: rotateX($tilt) rotate(-12deg);
+    padding: 0;
+    transform: rotateX($tilt) rotate(-5deg);
+  
+    #strange-img {
+      width: calc(100vw * 0.45);
+      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+              drop-shadow(-1px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+  
+    &:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+  }
+  
+  #elios-project {
+    top: 53%;
+    right: 10%;
+    padding: 0;
+    transform: rotateX($tilt) rotate(10deg);
   
     #elios-img {
-      width: calc(100vw * 0.22);
+      width: calc(100vw * 0.20);
       filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
-              drop-shadow(-3px $hard-shadow-depth 0px $hard-shadow-color);
+              drop-shadow(3px $hard-shadow-depth 0px $hard-shadow-color);
     }
   
     &:hover {
@@ -267,21 +290,6 @@ Tablets and small desktops ------------------
     }
   }
   
-  #strange-project {
-    top: 53%;
-    right: 1%;
-    transform: rotateX($tilt) rotate(4deg);
-  
-    #strange-img {
-      width: calc(100vw * 0.45);
-      filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
-              drop-shadow(2px $hard-shadow-depth 0px $hard-shadow-color);
-    }
-  
-    &:hover {
-      transform: scale(1.1) rotate(2deg);
-    }
-  }
 }
 
 
@@ -354,17 +362,17 @@ Large desktops ------------------
 
   #popper-project {
     top: 41%;
-    right: 26%;
+    right: 22%;
     width: fit-content;
     
     #popper-img {
-      width: calc(#{$max-page-width}*0.16);
+      width: calc(#{$max-page-width}*0.14);
     }
   }
   
   #elios-project {
-    top: 50%;
-    left: 5%;
+    top: 56%;
+    right: 10%;
   
     #elios-img {
       width: calc(#{$max-page-width}*0.24);
@@ -372,11 +380,11 @@ Large desktops ------------------
   }
   
   #strange-project {
-    top: 58%;
-    right: 3%;
+    top: 48%;
+    left: 0%;
   
     #strange-img {
-      width: calc(#{$max-page-width}*0.5);
+      width: calc(#{$max-page-width}*0.48);
     }
   }
 }

@@ -11,6 +11,10 @@
   }
 }
 
+.slider {
+  display: flex;
+}
+
 // .gallery-carousel {
 //   display: flex;
 //   // overflow-x: scroll;
@@ -30,7 +34,7 @@
 //   flex-direction: column;
 // }
 
-.slider-img {
+.slider-asset {
   transition: $transition-10;
 }
 
@@ -43,44 +47,38 @@
 /* Mobile ------ */
 @media only screen and (min-width: 20rem) {
   .project-gallery {
-    width: calc(100% + 1rem);
+    // width: calc(100% + 1rem);
+    width: 100%;
 
-    & .gallery-header, & .gallery-footer {
-      margin-left: 0.5rem;
-    }
+    // & .gallery-header, & .gallery-footer {
+    //   // margin-left: 0.5rem;
+    // }
   }
-
-  // .gallery-carousel {
-  //   flex-direction: column;
-  //   margin: 0 -1rem;
-  //   padding: 0 1rem;
-
-  //   & > img:last-child { margin-bottom: 0 }
-  // }
-
-  // .gallery-col {
-  //   flex-direction: column;
-  //   margin-bottom: 1rem;
-
-  //   .gallery-img-duo {
-  //     margin-bottom: 1rem;
-  //     &:last-of-type { margin-bottom: 0; }
-  //   }
-  // }
-
-  // .gallery-img {
-  //   border-radius: 6px;
-  //   filter: $reg-shadow-3;
-  // }
-
-  // .gallery-img-uno {
-  //   height: fit-content;
-  // }
 
   .gallery-footer {
     font-size: 0.75rem;
     line-height: 1rem;
     margin-top: 0.5rem;
+  }
+
+  .slider {
+    flex-direction: column;
+
+    & > * { margin: 0 }
+    & > * { margin-bottom: 0.5rem }
+    // & > .slider-item:first-child { margin-top: 1.5rem }
+    & > .slider-item:last-child { margin-bottom: 0 }
+  }
+
+  .slider-item {
+    // height: 428px;
+    width: 100%;
+  
+    .slider-asset {
+      width: 100%;
+      height: auto; 
+      // width: auto;
+    }
   }
 }
 
@@ -101,49 +99,19 @@
     }
   }
 
-  // .gallery-carousel {
-  //   // width: 100%;
-  //   flex-direction: row;
-    // margin: -30px 0px;
-    // padding: 30px 0px;
-  //   overflow: visible;
-  //   cursor: grab;
+  .slider {
+    width: max-content;
+    flex-direction: row;
   
-  //   & > * {
-  //     margin-right: 1rem;
-  //     z-index: -1;
-  //   }
+    & > * { margin-right: 1.5rem }
+    & > .slider-item:first-child { margin-left: 7rem }
+    & > .slider-item:last-child { margin-right: 7rem }
   
-  //   & > img:first-child { margin-left: 7rem }
-  //   & > img:last-child { margin-right: 7rem }
-  // }
+  }
 
-  // .gallery-img {
-  //   filter: $reg-shadow-1;
-  //   border-radius: 8px;
-  //   // scroll-snap-align: start;
-  //   pointer-events: none;
-    
-  
-  //   &:hover {
-  //     transform: scale(1.02);
-  //     z-index: 2;
-  //     filter: $reg-shadow-1 $reg-shadow-2;
-  //     transition: $transition-10;
-  //   }
-  // }
-
-  // .gallery-img-uno {
-  //   height: 428px;
-  // }
-
-  // .gallery-img-duo {
-  //   height: 206px;
-  //   margin-bottom: 1rem;
-  //   flex-shrink: 1;
-
-  //   &:last-of-type { margin-bottom: none; }
-  // }
+  .slider-item, .slider-asset {
+    width: 500px;
+  }
 
   .gallery-footer {
     font-size: 1rem;
@@ -160,10 +128,25 @@
     }
   }
   
-  // .gallery-carousel {
-  //   & > img:first-child { margin-left: 1.5rem }
-  //   & > img:last-child { margin-right: 1.5rem }
-  // }
+
+  .slider-wrapper {
+    cursor: grab;
+    overflow-x: hidden;
+    margin: -30px 0px;
+    padding: 30px 0px;
+  }
+
+  .slider {
+    & > * { margin-right: 1.5rem }
+    & > .slider-item:first-child { margin-left: 1.5rem }
+    & > .slider-item:last-child { margin-right: 1.5rem }
+  }
+
+  
+  .slider-item, .slider-asset {
+    width: 720px;
+    height: 100%;
+  }
 
 }
 
@@ -176,6 +159,12 @@
     & .gallery-header, & .gallery-footer {
       margin-left: calc(50vw - 575px);
     }
+  }
+
+  .slider {
+    & > * { margin-right: 1.5rem }
+    & > .slider-item:first-child { margin-left: calc(50vw - 575px) }
+    & > .slider-item:last-child { margin-right: calc(50vw - 575px) }
   }
 
   // .gallery-carousel-wrapper {
@@ -199,32 +188,3 @@
 }
 
 /* ---------- End of Responsive Web Section ---------- */
-
-.slider-wrapper {
-  cursor: grab;
-  overflow-x: hidden;
-  margin: -30px 0px;
-  padding: 30px 0px;
-}
-
-.slider {
-  width: max-content;
-  display: flex;
-
-  & > * { margin-right: 1.5rem }
-  & > .slider-item:first-child { margin-left: calc(50vw - 575px) }
-  & > .slider-item:last-child { margin-right: calc(50vw - 575px) }
-  // & > .slider-item:last-child { margin-right: 0 }
-
-}
-
-.slider-item {
-  height: 428px;
-  width: 100%;
-
-  img {
-    height: 100%; 
-    width: auto;
-  }
-  
-}

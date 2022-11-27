@@ -25,9 +25,6 @@ function IntroPage(props) {
    }); 
 
    function phraseChangeHandler(input) {
-      // if (val === 3) {
-      //    redirect to work page
-      // }
    
       if (val < 3 && input === "next") {
          // Handle visual phrase changes with css classes
@@ -36,7 +33,9 @@ function IntroPage(props) {
          phrases[val+1].classList.remove("phrase-hidden");
          phrases[val+1].classList.add("phrase-focus");
          // Handle height change
+         console.log("current container height: " + phrase_container.current.offsetHeight);
          const new_height = phrase_container.current.offsetHeight +  phrases[val+1].offsetHeight;
+         console.log("new container height: " + new_height)
          phrase_container.current.style.height = new_height + 'px';
          val++;
    

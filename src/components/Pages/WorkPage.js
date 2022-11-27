@@ -33,9 +33,10 @@ function WorkPage(props) {
                <CaseStudy name="priv" delay={0.35} src={priv}/>
                <CaseStudy name="abp" delay={0.5} src={abp}/>
                <CaseStudy name="applied" delay={0.2} src={applied}/>
+               <CaseStudy name="strange" delay={0.95} src={strange}/>
                <CaseStudy name="popper" delay={0.65} src={popper}/>
                <CaseStudy name="elios" delay={0.8} src={elios}/>
-               <CaseStudy name="strange" delay={0.95} src={strange}/>
+               
             </div>
          </div>               
       </motion.div>

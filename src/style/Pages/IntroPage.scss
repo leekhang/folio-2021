@@ -69,6 +69,7 @@ p { color: $header-black }
 
 /* Phrase States ------ */
 .phrase-hidden {
+  // display: none;
   opacity: 0;
   transition: $transition-25;
 }
@@ -104,24 +105,29 @@ p { color: $header-black }
   }
 
   // Typography
-  h1, p { font-size: 1.5rem }
+  h1 { font-size: 1.5rem }
+  p { font-size: 3rem }
   .name-letter-l { margin-right: -2px }
   .name-letter-e { margin-right: 1px } 
 
-
   // Phrase Section
   .phrase-list-container {
-    justify-content: center;
+    justify-content: end;
+  }
+
+  .phrase-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .phrase-layout {
     margin-bottom: 0.75rem;
     flex: 1 1 100%;
+    width: 100%;
   }
 
   .phrase-growing-container {
-    // height: calc(5 * 0.75rem);
-    height: 3.75rem;
+    height: calc(8 * 1.5rem);
   }
 
   .down-btn {
@@ -134,27 +140,35 @@ p { color: $header-black }
   }
 
   #FB-icon {
-    width: 56px;
-    right: -8px;
-    bottom: -24px;
+    width: 100px;
+    right: 0px;
+    bottom: -44px;
   }
   
   #Build-icon {
-    width: 48px;
-    left: -24px;
-    top: -38px;
+    width: 112px;
+    right: 24px;
+    bottom: -56px;
   }
   
   #Story-icon {
-    width: 56px;
-    right: -4px;
-    top: -28px;
+    width: 100px;
+    right: -12px;
+    top: 16px;
   }
   
   #Child-icon {
-    width: 40px;
-    left: -38px;
-    top: 12px;
+    width: 100px;
+    right: 16px;
+    bottom: -16px;
+  }
+}
+
+/* Mobile (2 Line Descriptions) ------ */
+
+@media only screen and (min-width: 29.375rem) {
+  .phrase-growing-container {
+    height: calc(6 * 1.5rem);
   }
 }
 
@@ -170,9 +184,16 @@ p { color: $header-black }
   .name-letter-l { margin-right: -6px }
   .name-letter-e { margin-right: 3px }
 
+  p { text-align: left }
+
   // Phrase Section
   .phrase-list-container {
     justify-content: flex-end;
+  }
+
+  .phrase-container {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .phrase-layout {
@@ -262,7 +283,7 @@ p { color: $header-black }
   }
   
   #Story-icon {
-    width: 180px;
+    width: 150px;
     right: -24px;
     top: -80px;
   }

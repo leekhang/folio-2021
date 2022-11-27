@@ -28,7 +28,6 @@ const Popper = {
         name: "Gallery",
         type: "gallery",
         content: [
-          // require('./Popper Cellar.png'),
           require('./Popper Main.png'),
           require('./Caffeine Design System.png')
         ],
