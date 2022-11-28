@@ -12,7 +12,7 @@ function ProjectHeaderSplash(props) {
    return (
       <div className="splash-img-container" id={`${props.content.metadata.name}-splash-img-container`}>
          {props.content.header.images.map((item, index) => {
-            return <img key={index} className="splash-img" id={`${props.content.metadata.name}-splash-${index}`} src={item}/>;
+            return <img key={index} className="splash-img" id={`${props.content.metadata.name}-splash-${index}`} src={item} loading="lazy"/>;
          })}
       </div>
    );
@@ -141,15 +141,3 @@ function ProjectPage(props) {
 }
 
 export default ProjectPage;
-
-
-{/* <div className="project-section project-context">
-               <div className="project-section-content">
-                  <h2 className="section-header" style={{color:theme}}>Context</h2>
-                  {props.content.sections[0].Content.map((item, index) => <p key={index} className="section-copy">{item}</p>)}
-               </div>
-            </div>
-
-            <div className="project-section project-gallery">
-               <ProjectGallery content={content}/>
-            </div> */}

@@ -44,10 +44,10 @@ export default function ProjectGallery(props) {
 
                 if (fileExt === 'mp4') {
                   output =  <video loop autoPlay muted key={index} className={`slider-asset ${props.projectName}-asset`} >
-                              <source src={asset} type="video/mp4" />
+                              <source src={asset} type="video/mp4"/>
                             </video>
                 } else {
-                  output = <img className={`slider-asset ${props.projectName}-asset`} src={asset} draggable="false" key={index}/>
+                  output = <img className={`slider-asset ${props.projectName}-asset`} src={asset} draggable="false" key={index} loading="lazy"/>
                 } 
 
                 return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ import strange from '../../assets/images/Strange Machines.png'
 
 function WorkPage(props) {
 
-   useEffect(() => {
+   useLayoutEffect(() => {
       document.documentElement.scrollTo(0, 0);
       document.getElementById("nav-name").style.color = "#FF9431";
    }, []);
@@ -57,7 +57,8 @@ function CaseStudy(props) {
             <img className="case-img"
                  id={`${props.name}-img`}
                  src={props.src}
-                 alt={`${props.name} project`} />
+                 alt={`${props.name} project`}
+                 loading="lazy" />
          </NavLink>
       </motion.div>
    );
