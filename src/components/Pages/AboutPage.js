@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import Tooltip from '../Elements/Tooltip';
-import profileImg from '../../assets/images/profile.jpg';
+import Comms from '../Elements/Comms';
 
 function AboutPage(props) {
    const [nameHover, setNameHover] = useState(0);
@@ -65,6 +64,7 @@ function AboutPage(props) {
                         </span>
                      </p>
                      <p className="about-p">I main Pacman on Super Smash Bros Ultimate & Raze in Valorant.</p>
+                     <Comms location="about"/>
                   </div>
                </div>
 

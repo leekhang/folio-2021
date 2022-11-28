@@ -16,7 +16,6 @@
 
 .navbar {
   width: 100%;
-  display: grid;
 }
 
 .nav-name-container {
@@ -26,7 +25,7 @@
 }
 
 #nav-name {
-  font-family: 'Peggs Bold';
+  font-family: 'Peggs Med';
   line-height: 100%;
   letter-spacing: -1px;
   text-decoration: none;
@@ -96,15 +95,22 @@
 
 /* Mobile ------ */
 @media only screen and (min-width: 20rem) {
+
+  #nav-comms-list {
+    display: none;
+  }
+
+  #about-comms-list {
+    display: flex;
+  }
   
   .navbar-container {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .navbar {
-    // width: 100vw;
-    // padding: 24px 0px 24px;
-    grid-template-columns: [first] 150px [line1] auto [line2] 150px [end];  
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-name-container span {
@@ -112,15 +118,15 @@
   }
 
   #nav-name {
-    font-size: 0.75rem
+    font-size: 1.25rem;
   }
 
   .nav-btn {
-    font-size: 10px;
+    font-size: 1rem;
   }
 
   .nav-link-btn {
-    padding: 6px 8px 7px;
+    padding: 8px 12px 9px;
     margin: 0px 4px 0px;
   }
 
@@ -141,9 +147,22 @@
 /* Tablets and small desktops ------ */
 @media only screen and (min-width: 50rem) {
 
+  #nav-comms-list {
+    display: flex;
+  }
+
+  #about-comms-list {
+    display: none;
+  }
+
   .navbar-container {
     display: flex;
     padding: 1.5rem;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: [first] 150px [line1] auto [line2] 150px [end];  
   }
 
   .nav-name-container span {

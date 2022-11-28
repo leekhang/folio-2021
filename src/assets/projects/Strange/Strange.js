@@ -13,7 +13,7 @@ const Strange = {
         contents: ["Product Design", "3 Months", "Summer 2020"]
       },
       images: [
-        require('../../images/Strange1.png')
+        require('./Strange Splash.png')
       ]
     },
     sections: [
