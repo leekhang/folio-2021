@@ -105,7 +105,7 @@ function ProjectPage(props) {
       window.scrollTo(0, 0);
       if (theme !== undefined) {
          document.getElementById("nav-name").style.color = theme;
-         document.getElementsByClassName("project-app")[0].style.background = `linear-gradient(to top, ${gradient} 50%,rgb(255, 255, 255) 100%)`;
+         document.getElementsByClassName("project-app")[0].style.background = `linear-gradient(to top, rgb(255, 255, 255) 0%, ${gradient} 20%, ${gradient} 80%, rgb(255, 255, 255) 100%)`;
       }
       return () => document.getElementById("nav-name").style.color = "#FF9431";
    },[]);

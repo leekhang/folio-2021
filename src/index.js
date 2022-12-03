@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import ScrollToTop from './components/Pages/ScrollToTop';
 // import reportWebVitals from './reportWebVitals';
 
 /* Import Styles ------------------------------ */ 
@@ -30,7 +29,6 @@ import './style/Elements/ProjectGallery.scss';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <ScrollToTop/> */}
       <App />
     </BrowserRouter>
   </React.StrictMode>,

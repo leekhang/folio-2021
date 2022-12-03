@@ -62,8 +62,6 @@
   // Priv ---------------
 
   #priv-splash-img-container {
-    // display: none;
-    // height: 2rem !important;
     flex: 0 0 2rem !important;
   }
 
@@ -77,7 +75,7 @@
   }
   
   #applied-splash-0 {
-    height: 100%;
+    width: 95%;
   }
 
   // Strange Machines -----------------
@@ -121,12 +119,12 @@
 
     // Applied ---------------
     #applied-splash-img-container {
-      flex: 1 1 40vw;
+      flex: 1 1 280px;
       margin-bottom: 0;
     }
 
     #applied-splash-0 {
-      height: 80%;
+      width: 100%;
     }
 
     #popper-splash-0 {
@@ -147,14 +145,14 @@
   // Applied ---------------
 
   #applied-splash-img-container {
-    flex: 0 0 360px;
+    flex: 1 1 420px;
     align-items: center;
   }
   
   #applied-splash-0 {
     position: absolute;
     top: 0;
-    height: 300px;
+    width: 95%;
   }
 
   .applied-slider-item, .applied-asset {
@@ -210,17 +208,16 @@
   // Applied ---------------
 
   #applied-project-section-content {
-    width: 60%;
+    width: 55%;
   }
 
   #applied-splash-img-container {
-    flex: 1 1 200px;
+    flex: 1 1 240px;
   }
   
   #applied-splash-0 {
     position: static;
-    width: 440px;
-    height: fit-content;
+    width: 95%;
     margin-top: 0rem;
   }
 
@@ -236,7 +233,7 @@
   #popper-splash-0 {
     left: 24px;
     position: relative;
-    height: fit-content;
+    // height: fit-content;
   }
 
   .popper-slider-item, .popper-asset {
@@ -251,7 +248,6 @@
   
   #strange-splash-img-container {
     flex: 1 1 200px;
-    // align-items: center;
   }
   
   #strange-splash-0 {
@@ -326,16 +322,15 @@ Large desktops ---------------------------------------
   
   #applied-splash-0 {
     position: absolute;
-    top: 0;
+    top: 1.25rem;
     right: 0;
-    width: 565px;
-    height: fit-content;
+    width: 105%;
     border-radius: 0px;
     margin-top: 2rem;
+    
   }
 
   .applied-slider-item, .applied-asset {
-    // height: 280px !important;
     width: 720px !important;
   }
 
@@ -368,7 +363,6 @@ Large desktops ---------------------------------------
   }
 
   #popper-splash-img-container {
-    // display: flex;
     flex-direction: row;
     justify-content: center; 
     align-items: center;
@@ -377,7 +371,6 @@ Large desktops ---------------------------------------
   #popper-splash-0 {
     position: relative;
     width: 200px;
-    height: fit-content;
   }
 
   .popper-slider-item, .popper-asset {

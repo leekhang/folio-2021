@@ -34,16 +34,17 @@ button {
 	&:hover { cursor: pointer; }
 }
 
-.app {
-	background-color: #FBF6ED;
-	background: linear-gradient(to top,rgb(251, 246, 237) 50%,rgb(255, 255, 255) 100%);
-}
-
-// html {
-// 	// height: 200vh;
-// 	// background:linear-gradient(to top, rgb(251, 246, 237),rgb(255, 255, 255));
-// 	// overflow: hidden;
+// .app {
+	// background-color: #FBF6ED;
 // }
+
+body {
+	background: linear-gradient(to top,
+														rgb(255, 255, 255) 0%, 
+														rgb(251, 246, 237) 20%,
+														rgb(251, 246, 237) 80%, 
+														rgb(255, 255, 255) 100%);
+}
 
 /* ---------- Responsive Web Adjustments ---------- */
 

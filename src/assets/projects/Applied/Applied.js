@@ -7,7 +7,7 @@ const Popper = {
     },
     header: {
       name: "Applied 2020",
-      catchphrase: "A free program for students to work with industry Product Designers",
+      catchphrase: "A remote, intensive program to work with industry Designers",
       descriptions: {
         titles: ["ROLE", "TIME", "DATE"],
         contents: ["Co Founder", "4 Months", "Summer 2020"]

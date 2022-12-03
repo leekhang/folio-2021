@@ -135,6 +135,7 @@ p { color: $header-black }
     height: 2.5rem; // 88px
     border: 2px solid $header-black;
 
+    &:focus { outline:0 }
 
     img { width: 1rem; }
   }

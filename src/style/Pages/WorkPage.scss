@@ -28,14 +28,8 @@
 }
 
 .case-study {
-  // width: fit-content;
   height: fit-content;
   transition: $transition-25;
-
-  &:hover {
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(.44,.01,.48,1);
-  }
 
   img { 
     display: block;
@@ -44,7 +38,9 @@
     margin: none;
 
     &:hover {
+      cursor: pointer;
       filter: $hov-shadow-1 $hov-shadow-2 $hov-shadow-3 $hov-shadow-4 !important;
+      // filter: none !important;
       transition: filter 0.25s cubic-bezier(.44,.01,.48,1);
     }
   }
@@ -258,7 +254,7 @@ Tablets and small desktops ------------------
 
   #strange-project {
     top: 45%;
-    left: 7%;
+    left: 4%;
     padding: 0;
     transform: rotateX($tilt) rotate(-5deg);
   
@@ -286,7 +282,7 @@ Tablets and small desktops ------------------
     }
   
     &:hover {
-      transform: scale(1.1) rotate(-4deg);
+      transform: scale(1.1) rotate(0deg);
     }
   }
   

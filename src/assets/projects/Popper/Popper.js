@@ -21,7 +21,7 @@ const Popper = {
         name: "Context",
         type: "text",
         content: [
-          "Coffee roasting used to be a household activity but slowly phased out due to the automation of coffee roasting during the industrial revolution. However, home-raosted coffee, much like cooking, can create a huge range of different flavors depending on your preferences.",
+          "Coffee roasting used to be a household activity but slowly phased out due to the automation of coffee roasting during the industrial revolution. However, home-roasted coffee, much like cooking, can create a huge range of different flavors depending on your preferences.",
           "For a couple of months, I was hired to do some early explorations on creating a coffee roasting experience for coffee lovers, from picking the beans, to roasting, to recording the results."
         ]
       },{ 
