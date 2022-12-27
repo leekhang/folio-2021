@@ -58,6 +58,7 @@ function IntroPage(props) {
       animate={{scale:1, opacity:1}}
       exit={{scale:0.95, opacity:0}}
       transition={{ duration: 0.75 }}>
+         {/* <div className="inner-intro-app"> */}
          <div className="name-container">
             <h1>Khang
                <br />
@@ -100,6 +101,7 @@ function IntroPage(props) {
 
             </div>
          </div>
+         {/* </div> */}
       </motion.div>
    );
 }
@@ -108,7 +110,7 @@ function Phrase(props) {
 
    const button = (props.order === 4) ? 
    (
-      <NavLink to="/work">
+      <NavLink className="to-work-link" to="/work">
          <button className="down-btn">
             <img alt="down-arrow" src={down_icon}></img>
          </button>

@@ -76,31 +76,31 @@
   }
 
   #about-body-container {
-    padding: 5rem 0 4rem;
+    padding: 4rem 0 4rem;
   }
 
   .about-title-section {
-    margin: 0px 0px 1.25rem;
+    margin: 0px 0px 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   
     #chinese-title, .about-title {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
 
   #name-tooltip-container {
-    height: 1.5rem;
-    width: 5rem;
+    height: 1.75rem;
+    width: 6rem;
   }
 
   .about-p {
     text-align: center;
     max-width: 500px;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .about-layout-container {
@@ -130,6 +130,7 @@
 
   .profile-img {
     width: 100%;
+    padding-top: 140%;
   }
 
   .p-contains-tooltip {
@@ -147,7 +148,7 @@
     height: 1.5rem; 
   }
   
-  .p-tooltip-container { width: 3rem }
+  .p-tooltip-container { width: 4.25rem }
 }
 
 /* Large Mobile ------ */
@@ -168,9 +169,9 @@
 
   .about-p {
     max-width: 580px;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+    // font-size: 1.25rem;
+    // line-height: 1.5rem;
+    // margin-bottom: 1rem;
   }
 
   .p-tooltip-container { width: 3.75rem }
