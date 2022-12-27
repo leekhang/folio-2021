@@ -103,10 +103,11 @@ p { color: $header-black }
   .intro-app {
     padding: 1.5rem; // 24px
     // height: calc(100vh - env(safe-area-inset-bottom));
-    height: 100%;
-    height: -webkit-fill-available;
-    height: fill-available;
-    height: stretch;
+    // height: 100%;
+    // height: -webkit-fill-available;
+    // height: fill-available;
+    // height: stretch;
+    padding-bottom: 4rem;
   }
 
   // Typography
