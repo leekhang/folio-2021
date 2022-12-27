@@ -74,15 +74,21 @@
 
 /* ------------------------------------------------- */ 
 
-h1 { font-family: 'Peggs Med' }
-p  { font-family: 'Peggs Reg'}
+h1 { 
+	font-family: 'Peggs Med';
+	letter-spacing: -1px;
+}
+p  { 
+	font-family: 'Peggs Reg';
+	letter-spacing: 0px;
+}
 
 h1, p {
 	font-weight: 400;
   line-height: 100%;
   margin: 0;
   text-align: left;
-	letter-spacing: -1px;
+	
 }
 
 a { 

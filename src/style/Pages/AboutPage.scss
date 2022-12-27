@@ -117,8 +117,9 @@
       width: 100%;
       margin-bottom: 1rem;
       display: flex;
+      align-items: center;
       justify-content: center;
-
+      flex-direction: column;
     }
   }
 
@@ -163,6 +164,7 @@
   .profile-img {
     width: 90%;
   }
+
   .about-right-column {
     height: fit-content;
   }

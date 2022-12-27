@@ -102,6 +102,7 @@
 
   #about-comms-list {
     display: flex;
+    margin-top: 1.5rem;
   }
   
   .navbar-container {
@@ -131,13 +132,12 @@
   }
 
   .nav-comm-btn {
-    display: none;
-    height: 22px;
-    width: 24px;
+    height: 32px;
+    width: 40px;
     margin: 0px 4px 0px;
   
       img {
-        width: 24px;
+        width: 28px;
         padding: 4px;
       }
   }

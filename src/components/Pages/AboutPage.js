@@ -18,7 +18,6 @@ function AboutPage(props) {
       >
          <div className="body-container" id="about-body-container">
             <div className="about-layout-container">
-
                <div className="about-left-column">
                   <div className="about-title-section">
                      <div className="about-title"><span id="chinese-title">你好。</span>Apa khabar?</div>
@@ -63,13 +62,16 @@ function AboutPage(props) {
                            .
                         </span>
                      </p>
+
                      <p className="about-p">I main Pacman on Super Smash Bros Ultimate & Raze in Valorant.</p>
-                     <Comms location="about"/>
+
+                     
                   </div>
                </div>
 
                <div className="about-right-column">
                   <div className="profile-img"></div>
+                  <Comms location="about"/>
                </div>
 
             </div>
