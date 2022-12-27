@@ -74,11 +74,15 @@
 
 /* ------------------------------------------------- */ 
 
+h1 { font-family: 'Peggs Med' }
+p  { font-family: 'Peggs Reg'}
+
 h1, p {
-  font-family: 'Peggs Reg';
+	font-weight: 400;
   line-height: 100%;
   margin: 0;
   text-align: left;
+	letter-spacing: -1px;
 }
 
 a { 
@@ -93,7 +97,11 @@ u {
 
 strong {
 	font-family: 'Relative Bold';
-	// font-weight: 1000;
+}
+
+h1, h2, h3, p, a, u, strong {
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: "kern" 1;
 }
 
 /* ---------- Responsive Web Adjustments ---------- */
