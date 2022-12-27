@@ -102,6 +102,7 @@ p { color: $header-black }
   
   .intro-app {
     padding: 1.5rem; // 24px
+    height: calc(100vh - env(safe-area-inset-bottom));
   }
 
   // Typography
@@ -178,6 +179,7 @@ p { color: $header-black }
 
   .intro-app {
     padding: 2.5rem 3rem 2.5rem 2.5rem; // 40px 48px 40px 40px
+    height: 100vh;
   }
 
   // Typography
