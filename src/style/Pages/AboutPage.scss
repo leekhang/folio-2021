@@ -134,7 +134,8 @@
   }
 
   .p-contains-tooltip {
-    width: 100%;
+    display: inline-flex;
+    width: fit-content;
     text-align: center;
     justify-content: center;
   }
@@ -167,14 +168,9 @@
   }
   
 
-  .about-p {
-    max-width: 580px;
-    // font-size: 1.25rem;
-    // line-height: 1.5rem;
-    // margin-bottom: 1rem;
-  }
+  .about-p { max-width: 580px }
 
-  .p-tooltip-container { width: 3.75rem }
+  .p-tooltip-container { width: 4.25rem }
 
 }
 	
