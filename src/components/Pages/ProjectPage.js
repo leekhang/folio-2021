@@ -1,7 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-// import { NavLink } from 'react-router-dom';
+import { motion, useWillChange } from 'framer-motion';
 
 import BackButton from '../Elements/BackButton';
 import ProjectGallery  from '../Elements/ProjectGallery';
@@ -100,6 +98,7 @@ function ProjectPage(props) {
    const content = props.content;
    const theme = content.metadata.theme;
    const gradient = content.metadata.gradient;
+   const willChange = useWillChange();
 
    useLayoutEffect(() => {
       window.scrollTo(0, 0);
@@ -112,9 +111,10 @@ function ProjectPage(props) {
 
    return (
       <motion.div className="app project-app" id={`${content.metadata.name}-project-app`}
-         initial={{scale:0.99, opacity:0}}
-         animate={{scale:1, opacity:1}}
-         exit={{y:0, scale:0.99, opacity:0}}
+         style={{ willChange }}
+         initial={{ scale:0.99, opacity:0 }}
+         animate={{ scale:1, opacity:1 }}
+         exit={{ y:0, scale:0.99, opacity:0 }}
          transition={{ duration: 0.6 }}
       >
          <div className="body-container" id="project-body-container">

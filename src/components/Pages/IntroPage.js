@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useWillChange } from 'framer-motion';
 
 import fb_icon from '../../assets/images/Meta.png'
 import build_icon from '../../assets/images/Build.png'
@@ -12,6 +12,7 @@ function IntroPage(props) {
    let val = 0
    const phrases = [];
    const phrase_container = useRef();
+   const willChange = useWillChange();
 
    useEffect(() => {
       for (let i = 0; i < 4; i++) phrases[i] = document.getElementById(`phrase-${i+1}`);
@@ -54,10 +55,12 @@ function IntroPage(props) {
 
    return (
       <motion.div className="app intro-app"
-      initial={{scale:1.1, opacity:0}}
-      animate={{scale:1, opacity:1}}
-      exit={{scale:0.95, opacity:0}}
-      transition={{ duration: 0.75 }}>
+         style={{ willChange }}
+         initial={{ scale:1.1, opacity:0 }}
+         animate={{ scale:1, opacity:1 }}
+         exit={{ scale:0.95, opacity:0 }}
+         transition={{ duration: 0.75 }}
+      >
          <div className="name-container">
             <h1>Khang
                <br />

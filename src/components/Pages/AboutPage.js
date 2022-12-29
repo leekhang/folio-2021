@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useWillChange } from 'framer-motion';
 
 import Tooltip from '../Elements/Tooltip';
 import Comms from '../Elements/Comms';
@@ -8,12 +8,14 @@ function AboutPage(props) {
    const [nameHover, setNameHover] = useState(0);
    const [ECEHover, setECEHover] = useState(0);
    const [HCIHover, setHCIHover] = useState(0);
+   const willChange = useWillChange();
    
    return ( 
       <motion.div className="app about-app"
-         initial={{y:-20, scale:1.05, opacity:0}}
-         animate={{y:0, scale:1, opacity:1}}
-         exit={{y:-20, scale:1.05, opacity:0 }}
+         style={{ willChange }}
+         initial={{ y:-20, scale:1.05, opacity:0 }}
+         animate={{ y:0, scale:1, opacity:1 }}
+         exit={{ y:-20, scale:1.05, opacity:0 }}
          transition={{ duration: 0.75 }}
       >
          <div className="body-container" id="about-body-container">

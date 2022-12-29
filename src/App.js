@@ -24,7 +24,6 @@ function App(props) {
   const [initial, setInitial] = useState(false);
   
   useEffect(() => {
-    // window.scrollTo(0,0);
     setInitial(true);
   }, []);
 

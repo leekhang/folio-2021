@@ -50,7 +50,7 @@ p { color: $header-black }
 
 .intro-icon { position: absolute }
 
-.phrase-growing-container { transition: $transition-50 }
+.phrase-growing-container { transition: $transition-25 }
 #FB-icon { animation: rotation 40s infinite linear }
 #Build-icon { animation: step-rotation 4s infinite step-start }
 #Story-icon { animation: wiggle 2s infinite ease-in-out }
