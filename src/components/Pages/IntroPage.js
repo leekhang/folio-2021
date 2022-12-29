@@ -66,7 +66,7 @@ function IntroPage(props) {
                <br />
                <span className="name-letter-l">L</span>
                <motion.span 
-                  initial={{ x:10, rotate:-64 }}
+                  initial={{ x:10, rotate:32 }}
                   animate={{ x:0, rotate:-32 }}
                   transition={{ duration:0.75, delay:0.5 }}
                   className="name-letter-e"
@@ -74,7 +74,7 @@ function IntroPage(props) {
                   e
                </motion.span>
                <motion.span
-                  initial={{ x:10, rotate:-64 }}
+                  initial={{ x:10, rotate:32 }}
                   animate={{ x:0, rotate:-32 }}
                   transition={{ duration:0.75, delay:0.5 }}
                   className="name-letter-e"
