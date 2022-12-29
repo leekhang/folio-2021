@@ -15,10 +15,12 @@ $hard-shadow-depth-mobile: 8px;
 $hard-shadow-depth: 16px;
 $hard-shadow-color: rgba(60, 43, 12, 0.5);
 
-$reg-shadow-1: drop-shadow(0 20px  17px rgba(89, 64, 19,.12));
-$reg-shadow-2: drop-shadow(0 12px  10px rgba(89, 64, 19,.1));
-$reg-shadow-3: drop-shadow(0 6px   5px  rgba(89, 64, 19,.08));
-$reg-shadow-4: drop-shadow(0 2px   2px  rgba(89, 64, 19,.04));
+$reg-shadow-1: drop-shadow(0 20px  17px rgba(89, 64, 19, .12));
+$reg-shadow-2: drop-shadow(0 12px  10px rgba(89, 64, 19, .1));
+$reg-shadow-3: drop-shadow(0 6px   5px  rgba(89, 64, 19, .08));
+$reg-shadow-4: drop-shadow(0 2px   2px  rgba(89, 64, 19, .04));
+
+$pp-shadow: drop-shadow(0 2px   12px  rgba(0, 0, 0, 0.4));
 
 $hov-shadow-1: drop-shadow(0 20px 17px rgba(89, 64, 19,.2));
 $hov-shadow-2: drop-shadow(0 12px 10px rgba(89, 64, 19,.18));

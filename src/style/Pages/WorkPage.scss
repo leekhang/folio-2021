@@ -50,14 +50,6 @@
   .case-img { will-change: filter }
 }
 
-#priv-project {
-  &:hover { transform: scale(1.02) rotate(-4deg) }
-}
-
-#abp-project {
-  &:hover { transform: scale(1.02) rotate(4deg) }
-}
-
 
 /* ---------- Responsive Web Adjustments ---------- */
 
@@ -124,13 +116,15 @@ Mobile ------------------------------------------
   }
 
   #priv-img, #abp-img, #applied-img, #popper-img {
-    filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
-            drop-shadow(-2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
+    // filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+    //         drop-shadow(-2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
+    filter: drop-shadow(-2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
   }
 
   #abp-img, #strange-img, #elios-img {
-    filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
-            drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
+    // filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
+    //         drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
+    filter: drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
   }
 
   #priv-img, #abp-img {
@@ -198,6 +192,8 @@ Tablets and small desktops ------------------
     left: 4%;
     padding: 0;
     transform: rotateX($tilt) rotate(-10deg);
+
+    &:hover { transform: scale(1.02) rotate(-4deg) }
     
     #priv-img {
       width: calc(100vw * 0.3);
@@ -205,13 +201,15 @@ Tablets and small desktops ------------------
       //         drop-shadow(-2px $hard-shadow-depth 0px $hard-shadow-color);
       filter: drop-shadow(-2px $hard-shadow-depth 0px $hard-shadow-color);
     }
-  } 
+  }
 
   #abp-project {
     top: 0;
     right: 4%;
     padding: 0;
     transform: rotateX($tilt) rotate(15deg);
+
+    &:hover { transform: scale(1.02) rotate(4deg) }
     
     #abp-img {
       width: calc(100vw * 0.3);

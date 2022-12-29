@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // background: linear-gradient(to top,rgb(251, 246, 237) 50%,rgb(255, 255, 255) 100%);
 }
 
 #about-body-container {
@@ -53,7 +52,7 @@
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 160%;
-  filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4;
+  filter: $pp-shadow;
 }
 
 .p-contains-tooltip {
@@ -158,7 +157,7 @@
 
   #about-body-container {
     width: 24rem;
-    padding: 2rem 0 4rem;
+    padding: 4rem 0 4rem;
   }
 
   .profile-img {
@@ -234,7 +233,6 @@
     width: 100%;
     padding-top: 160%;
     transform: rotate(2deg);
-    filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4;
   }
 
   .p-contains-tooltip {
