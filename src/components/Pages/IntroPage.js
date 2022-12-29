@@ -56,21 +56,40 @@ function IntroPage(props) {
    return (
       <motion.div className="app intro-app"
          style={{ willChange }}
-         initial={{ scale:1.1, opacity:0 }}
-         animate={{ scale:1, opacity:1 }}
-         exit={{ scale:0.95, opacity:0 }}
+         initial={{ y:40, scale:1.1, opacity:0 }}
+         animate={{ y:0, scale:1, opacity:1 }}
+         exit={{ y:40, scale:0.95, opacity:0 }}
          transition={{ duration: 0.75 }}
       >
          <div className="name-container">
             <h1>Khang
                <br />
                <span className="name-letter-l">L</span>
-               <span className="name-letter-e">e</span>
-               <span className="name-letter-e">e</span>
+               <motion.span 
+                  initial={{ x:10, rotate:-64 }}
+                  animate={{ x:0, rotate:-32 }}
+                  transition={{ duration:0.75, delay:0.5 }}
+                  className="name-letter-e"
+               >
+                  e
+               </motion.span>
+               <motion.span
+                  initial={{ x:10, rotate:-64 }}
+                  animate={{ x:0, rotate:-32 }}
+                  transition={{ duration:0.75, delay:0.5 }}
+                  className="name-letter-e"
+               >
+                  e
+               </motion.span>
             </h1>
          </div>
 
-         <div className="phrase-list-container">
+         <motion.div 
+            initial={{ y:40, opacity:0 }}
+            animate={{ y:0, opacity:1 }}
+            transition={{ duration:0.75, delay:1.25 }}
+            className="phrase-list-container"
+         >
             <div className="phrase-growing-container" id="phrase-container" ref={phrase_container}>
 
                <Phrase 
@@ -102,7 +121,7 @@ function IntroPage(props) {
                />
 
             </div>
-         </div>
+         </motion.div>
       </motion.div>
    );
 }
