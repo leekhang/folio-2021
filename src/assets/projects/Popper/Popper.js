@@ -28,7 +28,8 @@ const Popper = {
         name: "Gallery",
         type: "gallery",
         content: [
-          require('./Popper Main.png'),
+          require('./Popper Main 1.png'),
+          require('./Popper Main 2.png'),
           require('./Caffeine Design System.png')
         ],
         footer: "Shoot me an email for project details."

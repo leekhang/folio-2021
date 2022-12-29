@@ -1,7 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useWillChange } from 'framer-motion';
-import DetectBrowser from '../Functions/DetectBrowser';
 
 import priv from '../../assets/images/Meta Privacy.png';
 import abp from '../../assets/images/Meta ABP.png';
