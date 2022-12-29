@@ -48,16 +48,21 @@ function HandleProjectSections(projectName, sectionsArray, theme) {
       
       if (item.type === 'text') {
          return ( 
-            <div key={index} className="project-section-wrapper project-context">
+            <motion.div 
+               initial={{ y:10, opacity: 0 }} 
+               animate={{ y:0, opacity: 1 }} 
+               transition={{ duration: 0.4, delay:(index*0.2 + 0.75) }}
+               key={index} className="project-section-wrapper project-context"
+            >
                <div className="project-section project-section-text">
                   <h2 className="section-header" style={{color:theme}}> {item.name} </h2>
                   { item.content.map( (item, index) => handleParagraphContent(item, index, theme)) }
                </div>
-            </div>
+            </motion.div>
          );
 
       } else if (item.type === 'gallery') {
-         return ( <ProjectGallery projectName={projectName} title={item.name} content={item.content} theme={theme} index={index}/> );
+         return ( <ProjectGallery projectName={projectName} title={item.name} content={item.content} theme={theme} index={index} delay={index*0.2 + 0.75}/> );
       }   
    });
 }
@@ -123,10 +128,15 @@ function ProjectPage(props) {
                <BackButton text="Back" id="top-back-btn"/>
             </div>
 
-            <div className="project-section-wrapper project-header">
+            <motion.div 
+               initial={{ y:10, opacity: 0 }} 
+               animate={{ y:0, opacity: 1 }} 
+               transition={{ duration: 0.6, delay:0.2 }}
+               className="project-section-wrapper project-header"
+            >
                <ProjectHeaderContent content={content}/>
                <ProjectHeaderSplash content={content} />
-            </div>
+            </motion.div>
 
             { HandleProjectSections(content.metadata.name, content.sections, theme) }
             

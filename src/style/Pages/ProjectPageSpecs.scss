@@ -163,7 +163,8 @@
 
   .popper-slider-item, .popper-asset {
     height: 400px !important;
-    width: fit-content !important;
+    width: auto !important;
+    // width: fit-content !important;
   }
 
   // Strange Machines ---------------

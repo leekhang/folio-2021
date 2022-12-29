@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import NavBar from './components/Elements/NavBar';
 
-import ScrollToTop from './components/Pages/ScrollToTop';
+import ScrollToTop from './components/Functions/ScrollToTop';
 import IntroPage from './components/Pages/IntroPage';
 import WorkPage from './components/Pages/WorkPage';
 import AboutPage from './components/Pages/AboutPage';
@@ -39,7 +39,7 @@ function App(props) {
     <div className="App">
       <Route path={["/work", "/about"]} component={NavBar} /> 
       <ScrollToTop/>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <Switch location={location} key={location.pathname}>
           <Route exact path="/" render={ routerProps => (<IntroPage {...routerProps}/>) } />
           <Route exact path="/work" render={ routerProps => (<WorkPage { ...routerProps } />) }/> 

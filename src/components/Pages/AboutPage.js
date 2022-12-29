@@ -21,7 +21,12 @@ function AboutPage(props) {
          <div className="body-container" id="about-body-container">
             <div className="about-layout-container">
                <div className="about-left-column">
-                  <div className="about-title-section">
+                  <motion.div 
+                     initial={{ y:10, opacity: 0 }} 
+                     animate={{ y:0, opacity: 1 }} 
+                     transition={{ duration: 0.4, delay:0.75 }}
+                     className="about-title-section"
+                  >
                      <div className="about-title"><span id="chinese-title">你好。</span>Apa khabar?</div>
                      <div className="about-title" id="about-title-2nd-row">
                         I'm&nbsp;
@@ -33,15 +38,34 @@ function AboutPage(props) {
                         </div>
                         .
                      </div>
-                  </div>
+                  </motion.div>
 
                   <div className="about-body-section">
 
-                     <p className="about-p">I'm a Creative based in San Francisco, born and raised in Malaysia 🇲🇾.</p>
+                     <motion.p 
+                        initial={{ y:10, opacity: 0 }} 
+                        animate={{ y:0, opacity: 1 }} 
+                        transition={{ duration: 0.4, delay:1 }}
+                        className="about-p"
+                     >
+                        I'm a Creative based in San Francisco, born and raised in Malaysia 🇲🇾.
+                     </motion.p>
 
-                     <p className="about-p">Currently, I take on the title of Product Design. But outside of that, I love creating things that tell a touching story.</p>
+                     <motion.p 
+                        initial={{ y:10, opacity: 0 }} 
+                        animate={{ y:0, opacity: 1 }} 
+                        transition={{ duration: 0.4, delay:1.2 }}
+                        className="about-p"
+                     >
+                        Currently, I take on the title of Product Design. But outside of that, I love creating things that tell a touching story.
+                     </motion.p>
 
-                     <p className="about-p">
+                     <motion.p 
+                        initial={{ y:10, opacity: 0 }} 
+                        animate={{ y:0, opacity: 1 }} 
+                        transition={{ duration: 0.4, delay:1.4 }}
+                        className="about-p"
+                     >
                         <span>I graduated at the University of Washington with a double STEM degree  </span>
                         <span className="p-contains-tooltip">
                            in&nbsp;
@@ -63,9 +87,16 @@ function AboutPage(props) {
                               id="HCI"/>
                            .
                         </span>
-                     </p>
+                     </motion.p>
 
-                     <p className="about-p">I main Pacman on Super Smash Bros Ultimate & Raze in Valorant.</p>
+                     <motion.p
+                        initial={{ y:10, opacity: 0 }} 
+                        animate={{ y:0, opacity: 1 }} 
+                        transition={{ duration: 0.4, delay:1.6 }}
+                        className="about-p"
+                     >
+                        I main Pacman on Super Smash Bros Ultimate & Raze in Valorant.
+                     </motion.p>
 
                      
                   </div>

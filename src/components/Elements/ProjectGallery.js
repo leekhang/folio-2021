@@ -22,7 +22,12 @@ export default function ProjectGallery(props) {
   },[carousel.current, carouselWrapper.current]);
 
   return (
-    <div key={props.index} className="project-section-wrapper project-gallery">
+    <motion.div 
+      initial={{ y:10, opacity: 0 }} 
+      animate={{ y:0, opacity: 1 }} 
+      transition={{ duration: 0.4, delay:props.delay }}
+      key={props.index} className="project-section-wrapper project-gallery"
+    >
 
       <div className="project-section">
 
@@ -67,6 +72,6 @@ export default function ProjectGallery(props) {
         {footer}
 
       </div>
-    </div>
+    </motion.div>
   );
 }
