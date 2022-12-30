@@ -19,15 +19,9 @@ p { color: $header-black }
 /* Name Title ------ */
 .name-container {
   position: fixed;
-  // flex: 0 1 100px;
-
-  .name-letter-l {
-    display: inline-block;
-  }
-
-  .name-letter-e {
-    display: inline-block;
-  }
+  
+  .name-letter-l { display: inline-block }
+  .name-letter-e { display: inline-block }
 }
 
 /* Phrase Section ------ */
@@ -50,7 +44,7 @@ p { color: $header-black }
 .intro-icon { position: absolute }
 
 .phrase-growing-container { transition: $transition-25 }
-#FB-icon { animation: rotation 40s infinite linear }
+#FB-icon { animation: rotation 25s infinite linear }
 #Build-icon { animation: step-rotation 4s infinite step-start }
 #Story-icon { animation: wiggle 2s infinite ease-in-out }
 #Child-icon { animation: tada 2s infinite linear }
