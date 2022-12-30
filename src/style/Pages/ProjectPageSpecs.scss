@@ -162,9 +162,8 @@
   // Popper -------------------------
 
   .popper-slider-item, .popper-asset {
-    height: 400px !important;
-    width: auto !important;
-    // width: fit-content !important;
+    width: 500px !important;
+    height: fit-content !important;
   }
 
   // Strange Machines ---------------
@@ -234,11 +233,10 @@
   #popper-splash-0 {
     left: 24px;
     position: relative;
-    // height: fit-content;
   }
 
   .popper-slider-item, .popper-asset {
-    height: 480px !important;
+    width: 540px !important;
   }
 
   // Strange Machines -----------------
@@ -375,6 +373,6 @@ Large desktops ---------------------------------------
   }
 
   .popper-slider-item, .popper-asset {
-    height: 560px !important;
+    width: 580px !important;
   }
 }
