@@ -48,30 +48,34 @@ function IntroPage(props) {
    }
 
    return (
-      <div className="app intro-app">
+      <motion.div 
+         className="app intro-app"
+         style={{ willChange }}
+         initial={{ opacity:0, scale:1 }}
+         animate={{ opacity:1, scale:1 }}
+         exit={{ opacity:0, scale:0.97 }}
+         transition={{ duration:0.75, staggerChildren:1 }}
+      >
          <motion.div 
             className="name-container"
-            style={{ willChange }}
-            initial={{ y:400, opacity:0 }}
+            initial={{ y:200, opacity:0 }}
             animate={{ y:0, opacity:1 }}
             exit={{ y:40, opacity:0 }}
-            transition={{ duration:2.5, ease:[0.25, 1, 0.5, 1], delay:0.75 }}
+            transition={{ duration:2, ease:[0.25, 1, 0.5, 1] }}
          >
             <h1>Khang
                <br />
                <span className="name-letter-l">L</span>
-               <motion.span 
-                  initial={{ x:10, rotate:32 }}
-                  animate={{ x:0, rotate:-32 }}
-                  transition={{ duration:0.75, delay:1.75 }}
+               <motion.span
+                  animate={{ x:[0,0,0,0,0,2,0,0,0,0,0], rotate:[-32,-32,-32,-32,-32,-24,-32,-32,-32,-32,-32] }}
+                  transition={{ duration:5, repeat:Infinity, repeatType:"reverse"}}
                   className="name-letter-e"
                >
                   e
                </motion.span>
                <motion.span
-                  initial={{ x:10, rotate:32 }}
-                  animate={{ x:0, rotate:-32 }}
-                  transition={{ duration:0.75, delay:1.75 }}
+                  animate={{ x:[0,0,0,0,0,2,0,0,0,0,0], rotate:[-32,-32,-32,-32,-32,-24,-32,-32,-32,-32,-32] }}
+                  transition={{ duration:5, repeat:Infinity, repeatType:"reverse", delay:0.1 }}
                   className="name-letter-e"
                >
                   e
@@ -80,9 +84,9 @@ function IntroPage(props) {
          </motion.div>
 
          <motion.div 
-            initial={{ y:-400, opacity:0 }}
+            initial={{ y:-200, opacity:0 }}
             animate={{ y:0, opacity:1 }}
-            transition={{ duration:2.5, ease:[0.25, 1, 0.5, 1], delay:2.5 }}
+            transition={{ duration:2, ease:[0.25, 1, 0.5, 1] }}
             className="phrase-list-container"
          >
             <div className="phrase-growing-container" id="phrase-container" ref={phrase_container}>
@@ -117,7 +121,7 @@ function IntroPage(props) {
 
             </div>
          </motion.div>
-      </div>
+      </motion.div>
    );
 }
 
