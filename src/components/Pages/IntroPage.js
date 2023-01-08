@@ -19,7 +19,7 @@ function IntroPage(props) {
       for (let i = 0; i < numberOfPhrases; i++) {
          phrases[i] = document.getElementById(`phrase-${i+1}`);
       }
-   },[]);
+   });
    
 
    function phraseChangeHandler(input) {
