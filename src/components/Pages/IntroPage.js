@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useWillChange } from 'framer-motion';
 
@@ -10,20 +10,14 @@ import down_icon from '../../assets/images/DownArrow.png'
 
 function IntroPage(props) {
    let val = 0
-   const phrases = [];
+   const numberOfPhrases = 4;
+   let phrases = [];
    const phrase_container = useRef();
    const willChange = useWillChange();
 
-   useEffect(() => {
-      for (let i = 0; i < 4; i++) phrases[i] = document.getElementById(`phrase-${i+1}`);
-      window.addEventListener('keydown', (event) => {
-         if ( event.key === "ArrowRight" || event.key === "ArrowDown" ) {
-            phraseChangeHandler("next");
-         } else if ( event.key === "ArrowLeft" || event.key === "ArrowUp" ) {
-            phraseChangeHandler("prev");
-         }
-      });
-   }); 
+   for (let i = 0; i < numberOfPhrases; i++) {
+      phrases[i] = document.getElementById(`phrase-${i+1}`);
+   }
 
    function phraseChangeHandler(input) {
    

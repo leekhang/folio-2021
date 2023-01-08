@@ -102,13 +102,14 @@ p { color: $header-black }
     padding: 1.5rem; // 24px
     padding-bottom: 8rem;
     height: 100vh;
-    // height: calc(100vh - 6rem);
-    min-height: fill-available;
+    // min-height: fill-available;
+    min-height: stretch;
   }
 
   .inner-intro-app {
     min-height: 100vh;
-    min-height: fill-available;
+    // min-height: fill-available;
+    min-height: stretch;
   }
 
   // Typography
