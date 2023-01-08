@@ -48,21 +48,22 @@ function IntroPage(props) {
    }
 
    return (
-      <motion.div className="app intro-app"
-         style={{ willChange }}
-         initial={{ y:40, scale:1.1, opacity:0 }}
-         animate={{ y:0, scale:1, opacity:1 }}
-         exit={{ y:40, scale:0.95, opacity:0 }}
-         transition={{ duration: 0.75 }}
-      >
-         <div className="name-container">
+      <div className="app intro-app">
+         <motion.div 
+            className="name-container"
+            style={{ willChange }}
+            initial={{ y:400, opacity:0 }}
+            animate={{ y:0, opacity:1 }}
+            exit={{ y:40, opacity:0 }}
+            transition={{ duration:2.5, ease:[0.25, 1, 0.5, 1], delay:0.75 }}
+         >
             <h1>Khang
                <br />
                <span className="name-letter-l">L</span>
                <motion.span 
                   initial={{ x:10, rotate:32 }}
                   animate={{ x:0, rotate:-32 }}
-                  transition={{ duration:0.75, delay:0.5 }}
+                  transition={{ duration:0.75, delay:1.75 }}
                   className="name-letter-e"
                >
                   e
@@ -70,18 +71,18 @@ function IntroPage(props) {
                <motion.span
                   initial={{ x:10, rotate:32 }}
                   animate={{ x:0, rotate:-32 }}
-                  transition={{ duration:0.75, delay:0.5 }}
+                  transition={{ duration:0.75, delay:1.75 }}
                   className="name-letter-e"
                >
                   e
                </motion.span>
             </h1>
-         </div>
+         </motion.div>
 
          <motion.div 
-            initial={{ y:40, opacity:0 }}
+            initial={{ y:-400, opacity:0 }}
             animate={{ y:0, opacity:1 }}
-            transition={{ duration:0.75, delay:1.25 }}
+            transition={{ duration:2.5, ease:[0.25, 1, 0.5, 1], delay:2.5 }}
             className="phrase-list-container"
          >
             <div className="phrase-growing-container" id="phrase-container" ref={phrase_container}>
@@ -116,7 +117,7 @@ function IntroPage(props) {
 
             </div>
          </motion.div>
-      </motion.div>
+      </div>
    );
 }
 
