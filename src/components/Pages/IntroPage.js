@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useWillChange } from 'framer-motion';
 
@@ -15,9 +15,12 @@ function IntroPage(props) {
    const phrase_container = useRef();
    const willChange = useWillChange();
 
-   for (let i = 0; i < numberOfPhrases; i++) {
-      phrases[i] = document.getElementById(`phrase-${i+1}`);
-   }
+   useEffect(() => {
+      for (let i = 0; i < numberOfPhrases; i++) {
+         phrases[i] = document.getElementById(`phrase-${i+1}`);
+      }
+   },[]);
+   
 
    function phraseChangeHandler(input) {
    
@@ -28,9 +31,9 @@ function IntroPage(props) {
          phrases[val+1].classList.remove("phrase-hidden");
          phrases[val+1].classList.add("phrase-focus");
          // Handle height change
-         console.log("current container height: " + phrase_container.current.offsetHeight);
+         // console.log("current container height: " + phrase_container.current.offsetHeight);
          const new_height = phrase_container.current.offsetHeight +  phrases[val+1].offsetHeight;
-         console.log("new container height: " + new_height)
+         // console.log("new container height: " + new_height)
          phrase_container.current.style.height = new_height + 'px';
          val++;
    
@@ -54,14 +57,13 @@ function IntroPage(props) {
          initial={{ opacity:0, scale:1 }}
          animate={{ opacity:1, scale:1 }}
          exit={{ opacity:0, scale:0.97 }}
-         transition={{ duration:0.75, staggerChildren:1 }}
+         transition={{ duration:0.75 }}
       >
          <motion.div 
             className="name-container"
             initial={{ y:200, opacity:0 }}
             animate={{ y:0, opacity:1 }}
-            exit={{ y:40, opacity:0 }}
-            transition={{ duration:2, ease:[0.25, 1, 0.5, 1] }}
+            transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:1 }}
          >
             <h1>Khang
                <br />
@@ -86,7 +88,7 @@ function IntroPage(props) {
          <motion.div 
             initial={{ y:-200, opacity:0 }}
             animate={{ y:0, opacity:1 }}
-            transition={{ duration:2, ease:[0.25, 1, 0.5, 1] }}
+            transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:2.5 }}
             className="phrase-list-container"
          >
             <div className="phrase-growing-container" id="phrase-container" ref={phrase_container}>
