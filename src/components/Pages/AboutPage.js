@@ -16,7 +16,7 @@ function AboutPage(props) {
          initial={{ y:-20, scale:1.05, opacity:0 }}
          animate={{ y:0, scale:1, opacity:1 }}
          exit={{ y:-20, scale:1.05, opacity:0 }}
-         transition={{ duration: 0.75 }}
+         transition={{ duration: 0.75, delay: 0.25 }}
       >
          <div className="body-container" id="about-body-container">
             <div className="about-layout-container">

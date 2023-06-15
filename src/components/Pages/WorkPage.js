@@ -30,14 +30,16 @@ function WorkPage(props) {
                <div className="page-title-section">
                   <div className="page-title">Work I'm Proud Of</div>
                </div>
-               <div className="main-section">
+               <motion.div className="main-section"
+                  transition={{ duration: 0.75, delay: 1, delayChildren: 1.5 }}
+               >
                   <CaseStudy name="priv" delay={0.15} src={priv}/>
                   <CaseStudy name="abp" delay={0.3} src={abp}/>
                   <CaseStudy name="applied" delay={0.45} src={applied}/>
                   <CaseStudy name="strange" delay={0.6} src={strange}/>
                   <CaseStudy name="popper" delay={0.6} src={popper}/>
                   <CaseStudy name="elios" delay={0.8} src={elios}/>
-               </div>
+               </motion.div>
             </div>    
          </div>           
       </motion.div>

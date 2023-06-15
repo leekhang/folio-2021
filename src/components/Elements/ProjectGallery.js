@@ -43,7 +43,7 @@ export default function ProjectGallery(props) {
       setWidth(carousel.current.scrollWidth - carouselWrapper.current.offsetWidth);
    }, []);
 
-   return (
+   return (   
       <motion.div
          initial={{ y: 10, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}
