@@ -12,7 +12,11 @@ function RenderGalleryAssets(props) {
 
       if (fileExt === 'mp4') {
          output = 
-            <video loop autoPlay muted key={index} className={`slider-asset ${props.projectName}-asset`} key={index} >
+            <video 
+               loop autoplay muted playsinline
+               key={index}
+               className={`slider-asset ${props.projectName}-asset`}
+            >
                <source src={asset} type="video/mp4" />
             </video>
       } else {
