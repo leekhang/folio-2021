@@ -16,13 +16,15 @@
   width: 100%;
 
   #chinese-title {
-    font-family: "Peggs Reg";
+    font-family: "Peggs";
+    font-weight: 400;
     line-height: 125%;
     color: $header-black;
   }
 
   .about-title {
-    font-family: "Peggs Med";
+    font-family: "Peggs";
+    font-weight: 500;
     line-height: 125%;
     letter-spacing: -1px;
     color: $header-black;
@@ -35,7 +37,8 @@
 }
 
 .about-p {
-  font-family: 'Relative Book';
+  font-family: 'Relative';
+  font-weight: 400;
   color: $content-black;
   &:last-child { margin-bottom: 0 }
 }

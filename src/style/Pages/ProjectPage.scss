@@ -38,7 +38,8 @@
 }
 
 .project-title {
-  font-family: 'Relative Medium';
+  font-family: 'Relative';
+  font-weight: 500;
   z-index: 2;
 }
 
@@ -54,29 +55,32 @@
 }
 
 .desc-title {
-  font-family: 'Relative Bold';
+  font-family: 'Relative';
+  font-weight: 700;
   color: $subheader-black;
   opacity: 75%;
 }
 
 .desc-content {
-  font-family: 'Relative Book';
+  font-family: 'Relative';
+  font-weight: 400;
   color: $header-black;
 }
 
 .section-header {
-  font-family: 'Relative Medium';
+  font-family: 'Relative';
   font-weight: 500;
 }
 
 .section-subheader {
-  font-family: 'Relative Bold';
-  font-weight: 500;
+  font-family: 'Relative';
+  font-weight: 700;
   color: $body-copy;
 }
 
 .section-copy {
-  font-family: 'Relative Book';
+  font-family: 'Relative';
+  font-weight: 400;
   color: $body-copy;
 }
 
