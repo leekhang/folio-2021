@@ -63,7 +63,7 @@ function IntroPage(props) {
             className="name-container"
             initial={{ y:200, opacity:0 }}
             animate={{ y:0, opacity:1 }}
-            transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:1 }}
+            transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:0.5 }}
          >
             <h1>Khang
                <br />
@@ -88,7 +88,7 @@ function IntroPage(props) {
          <motion.div 
             initial={{ y:-200, opacity:0 }}
             animate={{ y:0, opacity:1 }}
-            transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:2.5 }}
+            transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:1.5 }}
             className="phrase-list-container"
          >
             <div className="phrase-growing-container" id="phrase-container" ref={phrase_container}>
