@@ -11,9 +11,9 @@ function RenderGalleryAssets(props) {
       console.log(index);
 
       if (fileExt === 'mp4') {
-         output = 
-            <video 
-               loop autoplay muted playsinline
+         output =
+            <video
+               loop autoPlay muted playsInline
                key={index}
                className={`slider-asset ${props.projectName}-asset`}
             >

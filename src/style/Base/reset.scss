@@ -23,13 +23,16 @@ time, mark, audio, video {
 
 html {
 	background-color: white;
+	overflow-x: hidden;
 }
 
 body {
+	overflow-x: hidden;
+	min-height: 100vh;
 	background: linear-gradient(to top,
-														rgb(255, 255, 255) 0%, 
+														rgb(255, 255, 255) 0%,
 														rgb(251, 246, 237) 20%,
-														rgb(251, 246, 237) 80%, 
+														rgb(251, 246, 237) 80%,
 														rgb(255, 255, 255) 100%) fixed;
 }
 
