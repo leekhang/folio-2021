@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -21,11 +21,7 @@ const projects = [priv, abp, popper, strange, applied, elios];
 
 function App(props) {
   const location = useLocation();
-  const [initial, setInitial] = useState(false);
-  
-  useEffect(() => {
-    setInitial(true);
-  }, []);
+  useEffect(() => {}, []);
 
   function renderProjectPage(routerProps) {
     let project = null;

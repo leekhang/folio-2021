@@ -28,7 +28,8 @@ function Comms(props) {
    return (
       <div className="comms-list" id={`${props.location}-comms-list`}>
 
-         <a id="email-link" onClick={() => handleEmailClick()} onMouseEnter={() => setEmailHover(1)} onMouseLeave={() => setEmailHover(0)}>
+         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+         <a id="email-link" onClick={handleEmailClick} onMouseEnter={() => setEmailHover(1)} onMouseLeave={() => setEmailHover(0)}>
             <div className="nav-btn nav-comm-btn contains-tooltip">
                <img className="nav-comm-img" src={mail} alt="email icon" />
                <Tooltip copy="Copy email to clipboard" status={emailHover} id="email-tooltip" />

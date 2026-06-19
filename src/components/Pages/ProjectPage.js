@@ -18,7 +18,7 @@ function ProjectPage(props) {
          document.getElementsByClassName("project-app")[0].style.background = `linear-gradient(to top, rgb(255, 255, 255) 0%, ${gradient} 20%, ${gradient} 80%, rgb(255, 255, 255) 100%)`;
       }
       return () => document.getElementById("nav-name").style.color = "#FF9431";
-   },[]);
+   }, [ theme, gradient ]);
 
    return (
       <motion.div className="app project-app" id={`${content.metadata.name}-project-app`}
