@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 import NavBar from './components/Elements/NavBar';
 
@@ -44,6 +45,7 @@ function App(props) {
           <Redirect to="/"/>
         </Switch>
       </AnimatePresence>
+      <Analytics />
     </div>
   );
 }
