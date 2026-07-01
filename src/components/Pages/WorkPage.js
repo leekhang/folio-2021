@@ -6,7 +6,6 @@ import ig from '../../assets/images/Meta IG.png';
 import priv from '../../assets/images/Meta Privacy.png';
 import abp from '../../assets/images/Meta ABP.png';
 import applied from '../../assets/images/Applied.png';
-import elios from '../../assets/images/ELIOS.png';
 import popper from '../../assets/images/Popper.png';
 import strange from '../../assets/images/Strange Machines.png';
 
