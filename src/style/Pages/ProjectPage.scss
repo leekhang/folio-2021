@@ -332,6 +332,23 @@
     line-height: 2.5rem;
   }
 
+  .section-header {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.2px;
+  }
+
+  .section-subheader {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .section-copy {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 720px;
+  }
+
   .section-copy-link > u {
     border-bottom: 2px solid $content-link;
   }

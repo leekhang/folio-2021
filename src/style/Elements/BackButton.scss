@@ -41,6 +41,10 @@
     width: 10px;
     margin-right: 4px;
   }
+
+  .back-btn-content {
+     font-size: 1rem;
+  }
 }
 
 /* Tablets and small desktops ------ */
@@ -70,6 +74,15 @@
   #top-back-btn-container {
     margin-top: 0rem;
   }
+
+  .back-arrow {
+    width: 16px;
+    margin-right: 8px;
+  }
+
+  .back-btn-content {
+     font-size: 1.25rem;
+  }
 }
 
 
@@ -78,10 +91,6 @@
 
   .back-btn {
     margin-top: 2rem;
-  }
-
-  .back-arrow {
-    width: 14px;
   }
 
   #top-back-btn {

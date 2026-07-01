@@ -431,6 +431,23 @@
     right: 8%;
   }
 
+  .ig-section-header {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.2px;
+  }
+
+  .ig-section-subheader {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .ig-section-copy {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 720px;
+  }
+
   .ig-slider-item, .ig-asset {
     width: 800px !important;
   }
