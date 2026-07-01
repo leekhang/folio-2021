@@ -1,0 +1,438 @@
+@import "../Base/Variables";
+
+/* ---- Navbar dark theme — applied after the IG page entry animation ---- */
+/* Body background is set by App.js on route change, before any animation starts. */
+
+
+.ig-dark-nav #nav-name {
+   color: $ig-theme;
+}
+
+.ig-dark-nav .nav-btn {
+   color: rgba(255, 255, 255, 0.8);
+   transition: color 0.4s ease;
+}
+
+.ig-dark-nav .nav-link-btn:hover {
+   border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ig-dark-nav .nav-comm-btn img {
+   filter: brightness(0) invert(1);
+}
+
+.ig-dark-nav .tooltip-label {
+   background-color: #ffffff;
+   color: #000000;
+}
+
+.ig-dark-nav .triangle {
+   background-color: #ffffff;
+}
+
+/* ---- Page shell ---- */
+
+.ig-project-app {
+   background: $ig-bg;
+   min-height: 100vh;
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   /* Back button adapts to dark background */
+   .back-arrow {
+      filter: brightness(0) invert(1);
+   }
+
+   .back-btn-content {
+      color: #FFFFFF;
+   }
+}
+
+/* ---- Title (SVG or fallback text) ---- */
+
+.ig-title-placeholder {
+   font-family: 'Instagram Sans', sans-serif;
+   font-weight: 700;
+   color: $ig-theme;
+   margin-bottom: 0.5rem;
+}
+
+.ig-header svg {
+   width: 100%;
+   height: auto;
+}
+
+/* ---- Header copy ---- */
+
+.ig-catchphrase {
+   font-family: 'Instagram Sans', sans-serif;
+   font-weight: 700;
+   color: #FFFFFF;
+}
+
+.ig-desc-label {
+   font-family: 'Relative';
+   font-weight: 700;
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.ig-desc-value {
+   font-family: 'Relative';
+   font-weight: 400;
+   color: #FFFFFF;
+}
+
+/* ---- Section text ---- */
+
+.ig-section-header {
+   font-family: 'Instagram Sans', sans-serif;
+   font-weight: 700;
+}
+
+.ig-section-copy {
+   font-family: 'Relative';
+   font-weight: 400;
+   color: rgba(255, 255, 255, 0.75);
+}
+
+/* Gallery section header inside the IG dark page */
+#ig-project-app .section-header {
+   font-family: 'Instagram Sans', sans-serif;
+   font-weight: 700;
+}
+
+/* ---- Splash composite ---- */
+
+.ig-splash-img {
+   position: absolute;
+   transition: transform 0.35s cubic-bezier(.44,.01,.48,1), filter 0.35s cubic-bezier(.44,.01,.48,1);
+   filter: drop-shadow(0 8px 20px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+#ig-splash-post {
+   transform: translate(-50%, -50%) rotateX(0deg) rotateY(-10deg) rotateZ(0) scale(1);
+   z-index: 1;
+
+   &:hover {
+     transform: translate(-50%, -50%) rotateY(-2deg) scale(1.1);
+   }
+}
+
+#ig-splash-shop-now {
+   transform: rotateX(-10deg) rotateY(10deg) rotateZ(5deg) scale(1);
+   z-index: 3;
+   
+   &:hover {
+     transform: rotateX(-5deg) rotateY(5deg) rotateZ(5deg) scale(1.25);
+   }
+}
+
+#ig-splash-midcard {
+   transform: rotateX(20deg) rotateY(38.5deg) rotateZ(-15deg) scale(1);
+   z-index: 1;
+
+   &:hover {
+     transform: rotateX(15deg) rotateY(20deg) rotateZ(-10deg) scale(1.15);
+   }
+}
+
+#ig-splash-learn-more {
+   transform: rotateX(0deg) rotateY(-22.5deg) rotateZ(1.5deg) scale(1);
+   z-index: 3;
+   
+   &:hover {
+     transform: rotateX(0deg) rotateY(-10deg) rotateZ(1deg) scale(1.1);
+   }
+}
+
+#ig-splash-metric {
+   transform: rotateX(-10deg) rotateY(-22.5deg) rotateZ(-1.5deg) scale(1);
+   z-index: 1;
+   
+   &:hover {
+     transform: rotateX(-5deg) rotateY(-18deg) rotateZ(0deg) scale(1.2);
+   }
+}
+
+/* ---- Responsive ---- */
+
+#ig-body-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: fit-content;
+   min-height: 100vh;
+   width: 100%;
+}
+
+/* Mobile */
+@media only screen and (min-width: 20rem) {
+   #ig-body-container {
+      padding: 5rem 1.5rem 3rem;
+   }
+
+   .ig-title-placeholder {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+   }
+
+   .ig-catchphrase {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      letter-spacing: 0;
+   }
+
+   .ig-desc-label {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.2px;
+      margin-bottom: 0;
+   }
+
+   .ig-desc-value {
+      font-size: 1rem;
+      line-height: 1rem;
+   }
+
+   .ig-section-header {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+   }
+
+   .ig-section-copy {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      width: 100%;
+   }
+
+   #ig-splash-container {
+      display: block;
+      flex: 0 0 360px;
+      overflow: visible;
+   }
+
+   #ig-splash-post {
+      width: 160px;
+      left: 47.5%;
+      top: 45%;
+   }
+
+   #ig-splash-shop-now {
+      width: 110px;
+      top: 18%;
+      left: 8%;
+   }
+
+   #ig-splash-midcard {
+      width: 136px;
+      top: 56%;
+      left: 4%;
+   }
+
+   #ig-splash-learn-more {
+      width: 104px;
+      top: 52%;
+      right: 12%;
+   }
+
+   #ig-splash-metric {
+      width: 112px;
+      top: 10%;
+      right: 12%;
+   }
+
+}
+
+/* Large Mobile */
+@media only screen and (min-width: 27rem) {
+   #ig-body-container {
+      width: 24rem;
+      padding: 5rem 0 3rem;
+   }
+}
+
+/* Tablets and small desktops */
+@media only screen and (min-width: 50rem) {
+   #ig-body-container {
+      width: 100%;
+      padding: 4.5rem 7rem 0;
+   }
+
+   #ig-splash-container {
+      display: block;
+      flex: 0 0 480px;
+      overflow: visible;
+   }
+
+   #ig-splash-post {
+      width: 248px;
+      left: 47.5%;
+      top: 45%;
+   }
+
+   #ig-splash-shop-now {
+      width: 144px;
+      top: 16%;
+      left: 16%;
+   }
+
+   #ig-splash-midcard {
+      width: 200px;
+      top: 60%;
+      left: 12%;
+   }
+
+   #ig-splash-learn-more {
+      width: 144px;
+      top: 64%;
+      right: 24%;
+   }
+
+   #ig-splash-metric {
+      width: 144px;
+      top: 12%;
+      right: 26%;
+   }
+
+   .ig-title-placeholder {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      letter-spacing: -1px;
+   }
+
+   .ig-catchphrase {
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      margin-bottom: 2rem;
+      letter-spacing: -1px;
+   }
+
+   .ig-desc-label {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.25rem;
+   }
+
+   .ig-desc-value {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+   }
+
+   .ig-section-header {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+   }
+
+   .ig-section-copy {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      width: 640px;
+   }
+
+   .ig-slider-item, .ig-asset {
+      width: 560px !important;
+   }
+}
+
+/* Small desktops */
+@media only screen and (min-width: 60rem) {
+  #ig-body-container {
+    width: 100%;
+    padding: 7.5rem 1.5rem 1.5rem;
+  }
+
+  #ig-splash-container {
+    display: block;
+  }
+
+  #ig-splash-post {
+    width: 280px;
+    left: 40%;
+    top: 50%;
+  }
+
+  #ig-splash-shop-now {
+    width: 144px;
+    top: 16%;
+    left: -10%;
+  }
+
+  #ig-splash-midcard {
+     width: 240px;
+     top: 80%;
+     left: -16%;
+  }
+
+  #ig-splash-learn-more {
+    width: 160px;
+    top: 68%;
+    right: 12%;
+  }
+
+  #ig-splash-metric {
+    width: 160px;
+    top: 16%;
+    right: 16%;
+  }
+
+  .ig-slider-item, .ig-asset {
+    width: 800px !important;
+  }
+}
+
+/* Large desktops */
+@media only screen and (min-width: 75rem) {
+  #ig-body-container {
+    width: 1150px;
+    padding: 7.5rem 0 5rem;
+  }
+
+  .ig-title-placeholder {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -1px;
+  }
+
+  .ig-catchphrase {
+    font-size: 4.5rem;
+    line-height: 4.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #ig-splash-post {
+    width: 320px;
+    left: 44%;
+    top: 50%;
+  }
+
+  #ig-splash-shop-now {
+    width: 180px;
+    top: 10%;
+    left: -10%;
+  }
+
+  #ig-splash-midcard {
+     width: 260px;
+     top: 68%;
+     left: -16%;
+  }
+
+  #ig-splash-learn-more {
+    width: 200px;
+    top: 72.5%;
+    right: 0%;
+  }
+
+  #ig-splash-metric {
+    width: 180px;
+    top: 12%;
+    right: 8%;
+  }
+
+  .ig-slider-item, .ig-asset {
+    width: 800px !important;
+  }
+
+}

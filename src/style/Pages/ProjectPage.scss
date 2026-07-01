@@ -121,7 +121,7 @@
   .project-section {
     order: 2;
     width: 100%;
-    & > * { margin-bottom: 0.5rem } // maybe no need
+    & > * { margin-bottom: 1rem } // maybe no need
   }
 
   .splash-img-container {
@@ -140,7 +140,7 @@
   .project-catchphrase {
     font-size: 1.5rem;
     line-height: 1.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     letter-spacing: 0;
   }
 
@@ -203,13 +203,13 @@
   }
 
   .project-section-wrapper {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
   }
 
   .project-section {
     order: 2;
     width: 100%;
-    & > p { margin-bottom: 0.75rem } // maybe no need
+    & > p { margin-bottom: 1.5rem } // maybe no need
   }
 
   .splash-img-container {
@@ -289,7 +289,7 @@
     width: 60%;
     & > h2 { margin-bottom: 1.25rem }
     & > h3 { margin-bottom: 0.25rem }
-    & > p { margin-bottom: 1rem }
+    & > p { margin-bottom: 2.5rem }
   }
 
   .splash-img-container {

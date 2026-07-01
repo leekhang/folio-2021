@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useWillChange } from 'framer-motion';
 
+import ig from '../../assets/images/Meta IG.png';
 import priv from '../../assets/images/Meta Privacy.png';
 import abp from '../../assets/images/Meta ABP.png';
 import applied from '../../assets/images/Applied.png';
@@ -33,12 +34,13 @@ function WorkPage(props) {
                <motion.div className="main-section"
                   transition={{ duration: 0.75, delay: 1, delayChildren: 1.5 }}
                >
-                  <CaseStudy name="priv" delay={0.15} src={priv}/>
-                  <CaseStudy name="abp" delay={0.3} src={abp}/>
-                  <CaseStudy name="applied" delay={0.45} src={applied}/>
-                  <CaseStudy name="strange" delay={0.6} src={strange}/>
-                  <CaseStudy name="popper" delay={0.6} src={popper}/>
-                  <CaseStudy name="elios" delay={0.8} src={elios}/>
+                  <CaseStudy name="ig" delay={0.15} src={ig} />
+                  <CaseStudy name="priv" delay={0.3} src={priv}/>
+                  <CaseStudy name="abp" delay={0.45} src={abp}/>
+                  <CaseStudy name="applied" delay={0.6} src={applied}/>
+                  <CaseStudy name="strange" delay={0.8} src={strange}/>
+                  <CaseStudy name="popper" delay={0.8} src={popper}/>
+                  {/* <CaseStudy name="elios" delay={0.8} src={elios}/> */ }
                </motion.div>
             </div>    
          </div>           
@@ -50,10 +52,10 @@ function CaseStudy(props) {
    const willChange = useWillChange();
 
    return (
-         <motion.div 
+         <motion.div
             style={{ willChange }}
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.2, delay: props.delay}}
             exit={{ opacity:0 }}
             className="case-study" id={`${props.name}-project`}

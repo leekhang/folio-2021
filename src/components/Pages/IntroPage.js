@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useWillChange } from 'framer-motion';
 
-import fb_icon from '../../assets/images/Meta.png'
+import ig_icon from '../../assets/images/IG Sticker 1.png'
 import build_icon from '../../assets/images/Build.png'
 import story_icon from '../../assets/images/Story.png'
 import child_icon from '../../assets/images/Child.png'
@@ -61,7 +61,7 @@ function IntroPage(props) {
       >
          <motion.div 
             className="name-container"
-            initial={{ y:200, opacity:0 }}
+            initial={{ y:100, opacity:0 }}
             animate={{ y:0, opacity:1 }}
             transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:0.5 }}
          >
@@ -69,14 +69,14 @@ function IntroPage(props) {
                <br />
                <span className="name-letter-l">L</span>
                <motion.span
-                  animate={{ x:[0,0,0,0,0,2,0,0,0,0,0], rotate:[-32,-32,-32,-32,-32,-24,-32,-32,-32,-32,-32] }}
+                  animate={{ x:[0,0,0,0,0,2,0,0,0,0,0], rotate:[-32,-32,-32,-32,-32,-16,-32,-32,-32,-32,-32] }}
                   transition={{ duration:5, repeat:Infinity, repeatType:"reverse"}}
                   className="name-letter-e"
                >
                   e
                </motion.span>
                <motion.span
-                  animate={{ x:[0,0,0,0,0,2,0,0,0,0,0], rotate:[-32,-32,-32,-32,-32,-24,-32,-32,-32,-32,-32] }}
+                  animate={{ x:[0,0,0,0,0,2,0,0,0,0,0], rotate:[-32,-32,-32,-32,-32,-16,-32,-32,-32,-32,-32] }}
                   transition={{ duration:5, repeat:Infinity, repeatType:"reverse", delay:0.1 }}
                   className="name-letter-e"
                >
@@ -86,35 +86,35 @@ function IntroPage(props) {
          </motion.div>
 
          <motion.div 
-            initial={{ y:-200, opacity:0 }}
-            animate={{ y:0, opacity:1 }}
+            initial={{ opacity:0 }}
+            animate={{ opacity:1 }}
             transition={{ duration:2, ease:[0.25, 1, 0.5, 1], delay:1.5 }}
             className="phrase-list-container"
          >
             <div className="phrase-growing-container" id="phrase-container" ref={phrase_container}>
 
-               <Phrase 
+               <Phrase
                   order = {1}
-                  content = "Product Designer at Meta Inc."
-                  imgId = "FB-icon" imgSrc = {fb_icon}
+                  content = {<>Product Designer<br/>Prev. at Instagram</>}
+                  imgId = "IG-icon" imgSrc = {ig_icon}
                   func = {phraseChangeHandler}
                />
 
-               <Phrase 
+               <Phrase
                   order = {2}
                   content = "Likes to build dope shit"
                   imgId = "Build-icon" imgSrc = {build_icon}
                   func = {phraseChangeHandler}
                />
 
-               <Phrase 
-                  order = {3} 
+               <Phrase
+                  order = {3}
                   content = "Avid storyteller"
                   imgId = "Story-icon" imgSrc = {story_icon}
                   func = {phraseChangeHandler}
                />
 
-               <Phrase 
+               <Phrase
                   order = {4}
                   content = "Advocate for the Inner Child"
                   imgId = "Child-icon" imgSrc = {child_icon}
@@ -144,7 +144,7 @@ function Phrase(props) {
 
    return (
       <div className={"phrase-container " + (props.order === 1 ? "phrase-focus" : "phrase-hidden")} id={`phrase-${props.order}`}>
-         <div className="phrase-layout">
+         <div className="phrase-layout" id={`phrase-${props.order}-content`}>
             <p className="phrase-content select-disabled">{props.content}</p>
             <img className="intro-icon select-disabled" id={props.imgId} alt="shapes icon" src={props.imgSrc} />
          </div>

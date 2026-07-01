@@ -129,8 +129,9 @@
   
 
   .slider-wrapper {
-    cursor: grab;
-    overflow-x: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
     margin: -30px 0px;
     padding: 30px 0px;
   }

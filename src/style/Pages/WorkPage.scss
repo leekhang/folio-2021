@@ -78,7 +78,7 @@ Mobile ------------------------------------------
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    gap: 1rem;
     perspective: 1500px;
   }
 
@@ -91,8 +91,12 @@ Mobile ------------------------------------------
     transform: rotateX($tilt) rotate(-7deg);
   }
 
-  #abp-project, #strange-project, #elios-project {
+  #ig-project, #abp-project, #strange-project, #elios-project {
     transform: rotateX($tilt) rotate(7deg);
+  }
+  
+  #ig-project {
+    padding-left: calc(100vw * 0.1);
   }
 
   #priv-project {
@@ -110,7 +114,7 @@ Mobile ------------------------------------------
 
   #popper-project {
     padding-right: calc(100vw * 0.4);
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
   }
 
   #elios-project {
@@ -123,7 +127,7 @@ Mobile ------------------------------------------
     filter: drop-shadow(-2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
   }
 
-  #abp-img, #strange-img, #elios-img {
+  #ig-img, #abp-img, #strange-img, #elios-img {
     // filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
     //         drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
     filter: drop-shadow(2px $hard-shadow-depth-mobile 0px $hard-shadow-color);
@@ -141,7 +145,7 @@ Mobile ------------------------------------------
     width: calc(100vw * 0.75);
   }
 
-  #popper-img {
+  #ig-img, #popper-img {
     width: calc(100vw * 0.27);
   }
 
@@ -189,9 +193,25 @@ Tablets and small desktops ------------------
     perspective: 1000px;
   }
 
+  #ig-project {
+    top: 4%;
+    left: 24%;
+    padding: 0;
+    transform: rotateX($tilt) rotate(-10deg);
+
+    &:hover { transform: scale(1.02) rotate(-4deg) }
+    
+    #ig-img {
+      width: calc(100vw * 0.16);
+      filter: drop-shadow(-4px $hard-shadow-depth 0px $hard-shadow-color);
+    }
+
+  }
+
+
   #priv-project {
-    top: 2%;
-    left: 4%;
+    top: 24%;
+    left: 12%;
     padding: 0;
     transform: rotateX($tilt) rotate(-10deg);
 
@@ -207,7 +227,7 @@ Tablets and small desktops ------------------
 
   #abp-project {
     top: 0;
-    right: 4%;
+    right: 10%;
     padding: 0;
     transform: rotateX($tilt) rotate(15deg);
 
@@ -223,8 +243,8 @@ Tablets and small desktops ------------------
   }
 
   #applied-project {
-    top: 25%;
-    left: 16%;
+    top: 36%;
+    right: 6%;
     padding: 0;
     transform: rotateX($tilt) rotate(12deg);
   
@@ -241,13 +261,13 @@ Tablets and small desktops ------------------
   }
 
   #popper-project {
-    top: 35%;
-    right: 20%;
+    top: 52%;
+    right: 18%;
     padding: 0;
     transform: rotateX($tilt) rotate(-12deg);
     
     #popper-img {
-      width: calc(100vw * 0.13);
+      width: calc(100vw * 0.15);
       // filter: $reg-shadow-1 $reg-shadow-2 $reg-shadow-3 $reg-shadow-4
       //         drop-shadow(-4px $hard-shadow-depth 0px $hard-shadow-color);
       filter: drop-shadow(-4px $hard-shadow-depth 0px $hard-shadow-color);
@@ -325,9 +345,18 @@ Large desktops ------------------
     perspective: 1000px;
   }
 
+  #ig-project {
+    top: 1%;
+    left: 16%;
+  
+    #ig-img { 
+      width: calc(#{$max-page-width}*0.20);
+    }
+  }
+
   #priv-project {
-    top: 0.8%;
-    left: 2%;
+    top: 22%;
+    left: 8%;
     
     #priv-img {
       width: calc(#{$max-page-width}*0.35);
@@ -355,8 +384,8 @@ Large desktops ------------------
   }
   
   #applied-project {
-    top: 27%;
-    left: 10%;
+    top: 42%;
+    right: 6%;
     width: fit-content;
 
     #applied-img {
@@ -365,7 +394,7 @@ Large desktops ------------------
   }
 
   #popper-project {
-    top: 41%;
+    top: 64%;
     right: 22%;
     width: fit-content;
     

@@ -17,6 +17,7 @@ import './style/Pages/WorkPage.scss';
 import './style/Pages/AboutPage.scss';
 import './style/Pages/ProjectPage.scss';
 import './style/Pages/ProjectPageSpecs.scss';
+import './style/Pages/IGPage.scss';
 
 // Component Styles
 import './style/Elements/Tooltip.scss';

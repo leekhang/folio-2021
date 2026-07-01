@@ -8,6 +8,10 @@ $content-black: #646464;
 $body-copy: #32312F;
 $content-link: #0078F0;
 
+/* IG Case Study */
+$ig-bg: #0C1014;
+$ig-theme: #DC00C5;
+
 $tilt: 9deg;
 $max-page-width: 1200px;
 
@@ -49,6 +53,11 @@ $ease-out-25: all 0.25 cubic-bezier(.17,.67,.83,.67);
 @keyframes rotation {
   from { transform: rotate(0deg) }
   to { transform: rotate(359deg) }
+}
+
+@keyframes counter-rotation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(-359deg) }
 }
   
 @keyframes step-rotation {

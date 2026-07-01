@@ -9,8 +9,8 @@ const ABP = {
       name: "Web Signals Team",
       catchphrase: "Defining the next era of ad attribution technology.",
       descriptions: {
-        titles: ["COMPANY", "ROLE", "TIME"],
-        contents: ["Meta, Inc.", "Product Designer", "Aug 2020 – Mar 2022"]
+        titles: ["COMPANY", "TIME"],
+        contents: ["Meta", "Aug 2020 – Mar 2022"]
       }
     },
     sections: [
@@ -22,11 +22,11 @@ const ABP = {
         ]
       },{
         type: "text",
-        name: "Role", 
+        name: "Role",
         content: [
           "As a Product Designer on the team, I've led several projects and strategies to help small-sized advertisers onboard to Conversions API through 3rd Party integrations."
         ]
-      },{ 
+      },{
         type: "gallery",
         name: "Selected Works",
         content: [

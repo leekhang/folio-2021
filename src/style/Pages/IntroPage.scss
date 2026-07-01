@@ -44,6 +44,7 @@ p { color: $header-black }
 .intro-icon { position: absolute }
 
 .phrase-growing-container { transition: $transition-25 }
+#IG-icon { animation: rotation 25s infinite linear }
 #FB-icon { animation: rotation 25s infinite linear }
 #Build-icon { animation: step-rotation 4s infinite step-start }
 #Story-icon { animation: wiggle 2s infinite ease-in-out }
@@ -149,10 +150,10 @@ p { color: $header-black }
     img { width: 1rem; }
   }
 
-  #FB-icon {
-    width: 100px;
+  #IG-icon {
+    width: 114px;
     right: 0px;
-    bottom: -44px;
+    bottom: 40px;
   }
   
   #Build-icon {
@@ -210,6 +211,10 @@ p { color: $header-black }
   .phrase-layout {
     margin-bottom: 1.5rem; //
     width: 30rem;
+
+    #phrase-1 {
+      width: 36rem;
+    }
   }
   
   .phrase-growing-container {
@@ -266,6 +271,10 @@ p { color: $header-black }
   .phrase-layout {
     margin-bottom: 2.25rem; // 40px
     width: 40rem; // 640px
+    
+    &#phrase-1-content {
+      width: 44rem;
+    }
   }
 
   .phrase-growing-container {
@@ -281,10 +290,16 @@ p { color: $header-black }
     img { width: 2.25rem; }
   }
 
+  #IG-icon {
+    width: 128px;
+    right: -8px;
+    top: -92px;
+  }
+
   #FB-icon {
-    width: 156px;
-    right: -12px;
-    bottom: -64px;
+    width: 136px;
+    right: 0px;
+    bottom: -48px;
   }
   
   #Build-icon {
